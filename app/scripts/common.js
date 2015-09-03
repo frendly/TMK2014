@@ -3,17 +3,12 @@
 $(function () {
 	activeMenuItem('.menu, #top-wrapper');
 	submenu();
-	triangleRezise();
 	breadcrumb();
 	queryToInput();
 	prevNextLink();
 	lightbox();
 
 	currentLinkToHistory();
-});
-
-$(window).resize(function() {
-	triangleRezise();
 });
 
 function activeMenuItem(el) {
@@ -184,70 +179,3 @@ function createHistoryList() {
 }
 
 /* END HISTORY FUNCTION BLOCK */
-
-function triangleRezise(){
-	$('.triangle').each(function(){
-		var parentWidth = $(this).parent().width();
-		var parentHeight = $(this).parent().height();
-		var widthVariable = $(this).attr('w');
-		if(!widthVariable){ var widthVariable = $(this).attr('h');}
-		triangleWidth = parseInt(widthVariable) / 100 * parentWidth;
-		var heightVariable = $(this).attr('h');
-		if(!heightVariable){ var heightVariable = $(this).attr('w');}
-		triangleHeight = parseInt(heightVariable) / 100 * parentWidth;
-
-		if($(this).hasClass('up')) {
-		  triangleWidth = triangleWidth / 2;
-		  triangleHeight = "" + triangleHeight + "px";
-		  triangleWidth = "" + triangleWidth + "px";
-		  var triangle = "0px " + triangleWidth + " " + triangleHeight + " " + triangleWidth;
-		  $(this).css("border-width", triangle);
-		}
-	  else if($(this).hasClass('down')) {
-		  triangleWidth = triangleWidth / 2;
-		  triangleHeight = "" + triangleHeight + "px";
-		  triangleWidth = "" + triangleWidth + "px";
-		  var triangle = triangleHeight + " " + triangleWidth + " " + "0px " + triangleWidth;
-		  $(this).css("border-width", triangle);
-	  }
-	  else if($(this).hasClass('left')) {
-		  triangleWidth = triangleWidth / 2;
-		  triangleHeight = "" + triangleHeight + "px";
-		  triangleWidth = "" + triangleWidth + "px";
-		  var triangle = triangleWidth + " " + triangleHeight + " " + triangleWidth + " " + "0px";
-		  $(this).css("border-width", triangle);
-	  }
-	  else if($(this).hasClass('right')) {
-		  triangleWidth = triangleWidth / 2;
-		  triangleHeight = "" + triangleHeight + "px";
-		  triangleWidth = "" + triangleWidth + "px";
-		  var triangle = triangleHeight +  " " + "0px " + triangleHeight + " " + triangleWidth;
-		  $(this).css("border-width", triangle);
-	  }
-	  else if($(this).hasClass('topleft')) {
-		  triangleHeight = "" + triangleHeight + "px";
-		  triangleWidth = "" + triangleWidth + "px";
-		  var triangle = triangleHeight + " " + triangleWidth + " " + "0px " + "0px";
-		  $(this).css("border-width", triangle);
-	  }
-	  else if($(this).hasClass('topright')) {
-		  triangleHeight = "" + triangleHeight + "px";
-		  triangleWidth = "" + triangleWidth + "px";
-		  var triangle = triangleHeight + " " + "0px " + "0px " + triangleWidth;
-		  $(this).css("border-width", triangle);
-	  }
-	  else if($(this).hasClass('bottomleft')) {
-		  triangleHeight = "" + triangleHeight + "px";
-		  triangleWidth = "" + triangleWidth + "px";
-		  var triangle = "0px " + triangleWidth + " " + triangleHeight + " " + "0px";
-		  $(this).css("border-width", triangle);
-	  }
-	  else if($(this).hasClass('bottomright')) {
-		  triangleHeight = "" + triangleHeight + "px";
-		  triangleWidth = "" + triangleWidth + "px";
-		  var triangle = "0px " + "0px " + triangleHeight + " " + triangleWidth;
-		  $(this).css("border-width", triangle);
-	  }
-	  else{};
-	 });
-};
