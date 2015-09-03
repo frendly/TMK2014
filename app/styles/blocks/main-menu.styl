@@ -1,0 +1,48 @@
+.menu
+	width 830px
+	font-size 14px
+	padding-bottom 25px
+	float left
+
+.menu__item
+	display inline-block
+	width 24%
+
+.menu__item:nth-child(1)
+	width 18%
+
+.menu__item:nth-child(3)
+	width 18%
+
+.menu__item:nth-child(4)
+	width 12%
+
+.menu__item:nth-child(7)
+	width 25%
+
+.menu__item:nth-child(8)
+	width 7%
+
+.menu__item:last-child
+	width 40%
+
+.menu__item_active > .menu__link,
+.menu__link_active
+	background-color $orange
+	text-decoration none
+	color: #fff
+	font-weight 700
+	display block
+
+.menu__link
+	font-size 14px
+	color $default_block_text
+	padding 10px 7px
+	display inline-block
+
+/*SUBMENU*/
+.submenu
+	display none
+
+	.menu__item
+		display block

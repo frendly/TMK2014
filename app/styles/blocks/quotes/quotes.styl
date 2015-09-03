@@ -1,0 +1,37 @@
+.quote
+	width 215px
+	margin-bottom 30px
+	margin-top 30px
+
+.quote:before,
+.quote:after
+	content ''
+	display block
+	width 80px
+	height 1px
+	background-color $orange
+	clearfix()
+
+.quote:before
+	height 5px
+	margin-bottom 15px
+
+.quote:after
+	margin-top 25px
+
+
+.quote.right,
+.quote_1__wrapper.right
+	margin-left 30px
+
+.quote.left
+.quote_1__wrapper.left
+	margin-right 30px
+
+.quote,
+.quote_2,
+.quote_3
+	position relative
+
+	& > *
+		font-size 1.2em !important

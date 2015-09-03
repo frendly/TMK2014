@@ -1,0 +1,23 @@
+block recommend
+#top-wrapper
+	.content
+		ul
+			li: a(href='/')
+				img(src='assets/images/home.png' alt='Главная' title='')
+			li: a(href='sitemap.html')
+				img(src='assets/images/sitemap.png' alt='Карта сайта' title='')
+
+			if pageId !== undefinded
+				li
+					a(href='recommend.html?index=#{pageId}&lang=#{recommend_lang}')
+					img(src='assets/images/kontakt.png' alt='Рекомендовать отчет' title='')
+				li |
+
+			li: a(href='contact.html') Контакты
+			li |
+			li: a(href='#') EN
+			li.search
+				form.searchform(method="post")
+					#search_wrapper
+						input#search_keywords(type='text' name='search_keywords' value='' maxlength='250' placeholder='Поиск...')
+						#search_submit

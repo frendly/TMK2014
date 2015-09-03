@@ -1,0 +1,53 @@
+//- +quote(position(left||right), text, bold_text, [path_to_photo]) (page 4)
+//- +quote_blue(position(left||right), huge_blue_text, text) (page 6)
+//- +quote_circle(position(left||right), big_black_text, text, [path_to_photo]) (page 7)
+
+mixin quote_1(position, text, bold_text, path_to_photo)
+	.quote_1__wrapper(class=position)
+		img.quote_1__image(src=globalPath + 'assets/images/' + path_to_photo)
+		.quote_1.quote
+			.quote_1__text=text
+			.quote_1__bold_text=bold_text
+
+mixin quote_blue(position, huge_blue_text, text)
+	.quote_blue.quote(class=position)
+		h3.quote_blue__huge_blue_text=huge_blue_text
+		.quote_blue__text=text
+
+mixin quote_blue_revert(position, text, huge_blue_text)
+	.quote_blue_revert.quote(class=position)
+		.quote_blue_revert__text=text
+		.quote_blue_revert__huge_blue_text=huge_blue_text
+
+mixin quote_circle(position, big_black_text, text, path_to_photo)
+	- var image_link = globalPath + 'assets/images/' + path_to_photo
+
+	.quote_circle__wrapper(class=position)
+		if path_to_photo
+			img.quote_circle__image(src=image_link)
+		.quote_circle.quote
+			.quote_circle__circle
+			.quote_circle__wrap_text
+				.quote_circle__big_black_text=big_black_text
+				.quote_circle__text=text
+
+
+mixin quote_2(text, text2)
+	.quote_2
+		.quote_2__text!= text
+		.quote_2__text2!= text2
+
+
+mixin quote_3(before_quote_text, text, orange_text, blue_text, path_to_photo, source)
+	- var alt = before_quote_text + ' ' + text + ' ' + orange_text + ' ' + blue_text
+	- var image_link = globalPath + 'assets/images/' + path_to_photo
+
+	.quote_3__wrapper
+		a.lightbox.quote_3__link(href=image_link)
+			img.quote_3__image(src=image_link alt=alt title=alt)
+		span.quote_3__before_quote_text= before_quote_text
+		.quote_3
+			.quote_3__text!= text
+			.quote_3__orange_text= orange_text
+			.quote_3__blue_text!= blue_text
+		span.quote_3__after_quote_text!= source

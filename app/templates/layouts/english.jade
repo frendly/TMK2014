@@ -1,0 +1,18 @@
+-var lang = "en";
+
+include ../helpers/variables
+include ../helpers/mixins
+
++script([], ['debug.js', 'common.min.js'])
+
+doctype html
+html(lang='en')
+	include ../blocks/head
+	body
+		include ../blocks/top-wrapper
+		.main
+			include ../blocks/main-menu
+			block content
+			include ../blocks/footer
+
+		include ../blocks/scripts

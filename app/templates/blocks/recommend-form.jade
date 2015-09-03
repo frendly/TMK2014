@@ -1,0 +1,14 @@
+p Пожалуйста, заполните поля и выберите пункт "Отправить", чтобы переслать Ваши рекомендации. Поля отмеченные звездочкой (*) являются обязательными.
+
+
+form(action='recommend.php' method='POST' enctype='multipart/form-data')
+	input(name='action' type='hidden' value='submit')
+	input(class='input_recommend_page' name='page' type='hidden' value='')
+	input(class='input_recommend_lang' name='lang' type='hidden' value='')
+
+	p: input(name='senderName' type='text' placeholder='Имя отправителя')
+	p: input(name='senderEmail' type='email' placeholder='Эл. адрес отправителя' required)
+	p: input(name='receiverName' type='text' placeholder='Имя получателя')
+	p: input(name='emailSendTo' type='email' placeholder='Эл. адрес получателя' required)
+	p: textarea(name='message' placeholder='Сообщение')
+	p: input(type='submit')

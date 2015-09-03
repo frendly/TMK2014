@@ -1,0 +1,28 @@
+.prev-next-navigation
+	position relative
+	font-size 14px
+
+.prev-next-navigation__next,
+.prev-next-navigation__prev
+	background-color $orange
+	display block
+	color #fff
+	text-decoration none
+	padding 4px 15px
+	text-decoration underline
+
+.prev-next-navigation__next:before,
+.prev-next-navigation__prev:before
+	content ""
+	width 17px
+	height 17px
+	display inline-block
+	margin-right 8px
+	position relative
+	top 5px
+
+.prev-next-navigation__next:before
+	background-image: url('../images/arrow_next_icon.png')
+
+.prev-next-navigation__prev:before
+	background-image: url('../images/arrow_prev_icon.png')

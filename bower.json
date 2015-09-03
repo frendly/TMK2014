@@ -1,0 +1,17 @@
+{
+  "name": "csssr-project-template",
+  "version": "0.8.0",
+  "devDependencies": {
+    "jquery": "~2.1.3",
+    "svg4everybody": "~1.0.0"
+  },
+  "resolutions": {
+    "jquery": ">=2.1.3"
+  },
+  "dependencies": {
+    "cookies-js": "~1.2.1",
+    "fotorama": "~4.6.4",
+    "simplelightbox": "~1.3.0",
+    "blurjs": "~0.2.0"
+  }
+}
