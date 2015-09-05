@@ -1,0 +1,21 @@
+.page0804
+	position relative
+
+	table
+		position relative
+
+		th:nth-of-type(n+4)
+			color: #fff
+
+		td:not(:last-child):not(:first-child)
+			border-right 1px dotted $orange
+
+		tr.bold td
+			border-bottom 1px solid $orange
+
+		tr:nth-child(2) td
+			border-bottom 1px solid $orange
+			font-weight normal
+
+		td:nth-of-type(2)
+			font-weight bold
