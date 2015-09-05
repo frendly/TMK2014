@@ -1,0 +1,68 @@
+.page0803
+	position relative
+
+	.quote_3__wrapper
+		width 100%
+
+	table
+		position relative
+
+		td:not(:last-child):not(:first-child)
+			border-right 1px dotted $orange
+
+		tr.bold td
+			border-bottom 1px solid $orange
+
+		tr:nth-child(2) td
+			border-bottom 1px solid $orange
+
+
+	.table_0803_1
+		position relative
+
+		td
+			position relative
+
+			&:nth-of-type(2),
+			&:nth-of-type(3)
+				border-right 1px dotted $orange
+
+		th:last-child
+			color #fff
+
+
+	.table_0803_2,
+	.table_0803_3,
+	.table_0803_4,
+	.table_0803_5
+		th:nth-child(n+4)
+			color: #fff
+
+		/*все вторые td начиная с 3 tr*/
+		tr:nth-child(n+3) td:nth-child(2)
+			font-weight bold
+
+		td
+			width 40%
+
+
+	.table_0803_6,
+	.table_0803_7
+		position relative
+
+		th
+			color #000 !important
+
+		td:nth-of-type(1)
+			width 65%
+
+
+	.table_0803_7 tr:nth-child(n+3) td:nth-child(2)
+		font-weight bold
+
+
+	.table_0803_10 tr:nth-child(2) td
+		border-right none
+
+	.table_0803_10 td:nth-of-type(1)
+			border-right 1px dotted $orange !important
