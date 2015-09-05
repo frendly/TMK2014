@@ -1,0 +1,21 @@
+.page0610
+	position relative
+
+	.table_0610_1
+		position relative
+
+		th,
+		td
+			text-align left
+			vertical-align top
+			font-size 12px
+
+			&:nth-of-type(2),
+			&:nth-of-type(3)
+				border-right 1px dotted $orange
+
+		td[colspan]
+			border-right none
+
+		td[colspan="4"]
+			border-bottom 2px solid $orange
