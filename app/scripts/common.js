@@ -31,7 +31,7 @@ function activeMenuItem(el) {
 }
 
 function submenu() {
-	$submenu = $('.menu .menu__link_active').closest('.submenu').clone();
+	$submenu = $('.menu .menu__link_active').closest('.submenu').end().siblings('.submenu').clone();
 	$submenu.find('li').removeClass().addClass('sub-menu__item');
 	$submenu.find('.menu__link_active').removeClass()
 		.addClass('sub-menu__link_active');
