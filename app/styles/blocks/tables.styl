@@ -30,3 +30,34 @@ td:first-child
 	border-left 1px dotted $orange
 
 /*table class 05-1(page ID + table ID on page)*/
+
+
+/*09*/
+/*стили раздела 09 вынесены в отдельный класс*/
+.table_09
+	border-top 1px solid $table_border
+	border-bottom 1px solid $table_border
+
+	th
+		background-color transparent
+	td
+		border none
+
+	.bb1
+		border-bottom 1px solid $table_border
+	.bb2
+		border-bottom 2px solid $table_border
+	.bb2fff
+		border-bottom 2px solid $table_border
+		position relative
+
+		&:after
+			content ''
+			width 100%
+			border-top 2px solid $table_border
+			border-bottom 2px solid #fff
+			position absolute
+			left 0
+			bottom 0
+	.pl
+		padding-left 15px
