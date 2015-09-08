@@ -1,0 +1,21 @@
+.page0904
+	position relative
+
+	.table_0904_1
+		position relative
+
+		td[colspan="2"],
+		tr:nth-of-type(n+2) td:nth-last-child(-n+4)
+		/*выбираем четыре последний td начиная со второго tr сверху*/
+			background-color $table_bg
+			white-space nowrap
+
+		th[colspan="2"],
+		tr:nth-of-type(1) td:nth-last-child(-n+2),
+		td:nth-of-type(2)
+			text-align center
+
+		td[colspan="2"]:last-child,
+		tr:nth-of-type(n+2) td:nth-child(5)
+		/*выбираем два последний td начиная со второго tr сверху*/
+			border-left 10px solid #fff
