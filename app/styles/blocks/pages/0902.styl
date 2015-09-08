@@ -1,0 +1,21 @@
+.page0902
+	position relative
+
+	.table_0902_1
+		position relative
+
+		th:last-child,
+		td:nth-last-child(-n+2)
+		/*last 2 td*/
+			background-color $table_bg
+
+		th[colspan="2"],
+		tr:nth-of-type(2) td:nth-last-child(-n+2),
+		td:nth-of-type(2)
+			text-align center
+
+		td:nth-of-type(1)
+			width 65%
+
+		td:last-child
+			border-left 10px solid #fff
