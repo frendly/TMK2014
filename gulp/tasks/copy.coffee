@@ -31,6 +31,7 @@ gulp.task 'copy:scripts', ->
 gulp.task 'copy:components', ->
 	gulp.src [
 			'jquery/dist/jquery.min.js'
+			'fotorama/fotorama.js'
 			'fancybox/source/*'
 		],
 			base: 'components'
