@@ -1,0 +1,21 @@
+.page0906
+	position relative
+
+	table
+		position relative
+
+		th
+			text-align center
+
+		th,
+		td
+			position relative
+
+			&:nth-of-type(n+3)
+				background-color $table_bg
+
+			&:nth-of-type(2)
+				text-align center
+
+			&:last-child
+				border-left 10px solid #fff
