@@ -7,6 +7,7 @@
 
 .sub-menu__item
 	position relative
+	width 200%
 
 .sub-menu__link
 	font-size 16px
@@ -14,21 +15,44 @@
 	padding-top 10px
 	padding-bottom 5px
 	color $default_block_text
+	width 50%
+	position relative
+	z-index 1
+
+.sub-menu__item_active
+	position relative
+	width 200%
+	overflow hidden
+
+	/*triangle*/
+	&:before
+		position absolute
+		height 0
+		top 50%
+		max-width 300%
+		border-right 500px solid $active_sub_menu
+		border-bottom 1000px solid transparent
+		content ""
+		left 50%
+		border-radius 0
+		margin-left 10px
+		transform scaleX(-1) translateX(100%)
+	&:after
+		position absolute
+		height 0
+		top 50%
+		transform scaleY(-1) scaleX(-1) translateY(100%) translateX(100%)
+		max-width 300%
+		border-radius 0
+		border-right 500px solid $active_sub_menu
+		border-bottom 1000px solid transparent
+		content ""
+		left 50%
+		margin-left 10px
 
 .sub-menu__link_active
-	background-color $active_sub_menu
 	text-decoration none
 	color #fff
 	font-weight 700
 	position relative
 	padding 6px 0 6px 10px
-
-.sub-menu__link_active .triangle
-	width 0
-	height 0
-	position absolute
-	top 1px
-	right -7px
-	border-top solid rgba(0, 0, 0, 0)
-	border-left solid $active_sub_menu
-	border-bottom solid rgba(0, 0, 0, 0)
