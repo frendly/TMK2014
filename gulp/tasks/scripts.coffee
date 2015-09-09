@@ -13,7 +13,6 @@ gulp.task 'scripts', ->
 			'components/cookies-js/dist/cookies.js'
 			'components/fotorama/fotorama.js'
 			'components/simplelightbox/dist/simple-lightbox.min.js'
-			'components/blurjs/dist/jquery.blur.js',
 			'components/fancybox/source/jquery.fancybox.pack.js',
 			'app/scripts/common.js'
 		]
