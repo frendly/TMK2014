@@ -2,11 +2,14 @@
 	background-color rgba(0,0,0, .8) !important
 */
 .lightbox
-	color $orange
+	position relative
+	display block !important
 
 .lightbox__zoom
 	text-align center
 	text-decoration underline
+	color $orange
+	display block
 
 	&:hover
 		text-decoration none
@@ -28,3 +31,10 @@
 	opacity 1 !important
 	margin-top 20px
 
+
+/*fancybox*/
+#fancybox-loading,
+.fancybox-close,
+.fancybox-prev span,
+.fancybox-next span
+	background-image url('../scripts/libs/fancybox/source/fancybox_sprite.png') !important
