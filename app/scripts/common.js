@@ -94,7 +94,25 @@ function queryToInput() {
 }
 
 function lightbox() {
-	$('.lightbox').append('<div class="lightbox__zoom">Увеличить</div>').simpleLightbox();
+	var box = $('.lightbox'),
+		link,
+		blockID;
+
+	if (box.is('a')) {
+		/*если тег задан ссылке, то считам, что внутри изображение*/
+		box.append('<div class="lightbox__zoom">Увеличить</div>').simpleLightbox();
+	} else {
+		/*так же может быть вариант table.lightbox: мы должны увеличить таблицу на весь экран*/
+		/*добавляем id к блоку, чтобы потом сослаться на него*/
+		box.each(function (i) {
+			blockID = 'lightbox_' + i;
+			link = $('<a />').prop('href', '#' + blockID).addClass('lightbox__zoom').append('Увеличить');
+			$(this).attr('id', blockID).after(link);
+		});
+
+		$('.lightbox__zoom').fancybox();
+	}
+
 }
 
 function prevNextLink() {
