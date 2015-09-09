@@ -31,7 +31,16 @@ function activeMenuItem(el) {
 }
 
 function submenu() {
-	$submenu = $('.menu .menu__link_active').closest('.submenu').end().siblings('.submenu').clone();
+	/*выбираем активный пункт меню*/
+	$submenu = $('.menu .menu__link_active');
+
+	if ($submenu.next().is('.submenu')) { /*если активен элемент 1 уровня, проверяем есть ли у него меню*/
+		$submenu = $submenu.siblings('.submenu').clone();
+	} else {
+		/*если меню рядом нет, значит мы глубже 1 уровня, поднимаемся до ближайшего субменю*/
+		$submenu = $submenu.closest('.submenu').clone();
+	}
+
 	$submenu.find('li').removeClass().addClass('sub-menu__item');
 	$submenu.find('.menu__link_active').removeClass()
 		.addClass('sub-menu__link_active');
