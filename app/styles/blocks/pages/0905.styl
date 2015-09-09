@@ -1,0 +1,28 @@
+.page0905
+	position relative
+
+	table
+		position relative
+
+		td
+			font-size .59em
+			padding 5px 3px
+
+		tr:nth-of-type(2) td
+			word-wrap break-word
+
+		tr:nth-of-type(n+3) td:nth-of-type(n+2)
+			/*background-color $table_bg*/
+			white-space nowrap
+
+		td:last-child
+			background-color $table_bg
+
+
+	/* open table in lightbox (width 100%) */
+	.fancybox-outer table
+		position relative
+
+		td
+			font-size 1em
+			padding 5px
