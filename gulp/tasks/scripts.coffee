@@ -14,6 +14,7 @@ gulp.task 'scripts', ->
 			'components/fotorama/fotorama.js'
 			'components/simplelightbox/dist/simple-lightbox.min.js'
 			'components/blurjs/dist/jquery.blur.js',
+			'components/fancybox/source/jquery.fancybox.pack.js',
 			'app/scripts/common.js'
 		]
 		.pipe plumber errorHandler: errorHandler

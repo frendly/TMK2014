@@ -32,6 +32,7 @@ gulp.task 'copy:components', ->
 	gulp.src [
 			'jquery/dist/jquery.min.js'
 			'svg4everybody/svg4everybody.min.js'
+			'fancybox/source/*'
 		],
 			base: 'components'
 			cwd: 'components'
