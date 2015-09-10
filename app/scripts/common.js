@@ -146,7 +146,7 @@ function prevNextLink() {
 												.text('Предыдущая страница')
 												.removeClass().addClass('prev-next-navigation__prev');
 
-	$('.prev-next-navigation').prepend(prevPageLink, nextPageLink);
+	$('.prev-next-navigation').prepend(prevPageLink, nextPageLink).sticky({topSpacing: 20}); /* STICKY BLOCK */
 }
 
 /* HISTORY FUNCTION */
