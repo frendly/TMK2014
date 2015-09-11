@@ -17,6 +17,7 @@ block recommend
 			li |
 			li: a(href='#') EN
 			li.search
+			li: include ../blocks/switch-language
 				form.searchform(method="post")
 					#search_wrapper
 						input#search_keywords(type='text' name='search_keywords' value='' maxlength='250' placeholder='Поиск...')
