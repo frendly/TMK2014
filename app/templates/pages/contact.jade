@@ -3,5 +3,9 @@ extends ../layouts/default
 block head
 	- pageTitle = 'Контакты';
 
+block recommend
+	- pageId = 'contact';
+	- recommend_lang = lang;
+
 block content
 	include ../blocks/main
