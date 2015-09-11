@@ -100,7 +100,7 @@ function lightbox() {
 		blockID;
 
 	if (box.is('a')) { /*если тег задан ссылке, то считам, что внутри изображение*/
-		if( box.find('.quote_3__image').width() > 350 ) {
+		if (box.find('.quote_3__image').width() > 350) {
 			box.append('<div class="lightbox__zoom">Увеличить</div>').simpleLightbox();
 		}
 
@@ -155,7 +155,7 @@ function prevNextLink() {
 function accordion() {
 	var acc_heading = $('.acc_heading');
 
-	acc_heading.click(function() {
+	acc_heading.click(function () {
 		if ($(this).hasClass('acc_open')) {
 			$(this).removeClass('acc_open').addClass('acc_closed').next().hide();
 			return false;
