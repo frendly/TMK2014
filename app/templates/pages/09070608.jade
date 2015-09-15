@@ -1,0 +1,36 @@
+extends ../layouts/default
+
+block head
+	- pageTitle = 'Прочие операционные доходы';
+
+block recommend
+	- pageId = '09070608';
+	- recommend_lang = lang;
+
+block content
+	p Прочие операционные доходы за год по 31 декабря были представлены следующими статьями:
+	table.table_09.table_09070608_1
+		tr.bold
+			td
+			td.bb1 2014 г.
+			td.bb1 2013 г.
+		tr
+			td Прибыль от штрафов и пеней
+			td 2 477
+			td 2 618
+		tr
+			td Прибыль от выбытия основных средств
+			td 122
+			td –
+		tr
+			td Прибыль от продажи оборотных активов
+			td 34
+			td 67
+		tr
+			td  Прочее
+			td.bb1 4 971
+			td.bb1 15 094
+		tr.bold
+			td
+			td.bb2fff 7 604
+			td.bb2fff 17 779
