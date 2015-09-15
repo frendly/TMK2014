@@ -103,9 +103,15 @@ function lightbox() {
 
 	if (box.is('a')) { /*если тег задан ссылке, то считам, что внутри изображение*/
 		if (box.find('.quote_3__image').width() > 350) {
-			box.append('<div class="lightbox__zoom">Увеличить</div>').simpleLightbox();
+			box.append('<div class="lightbox__zoom">Увеличить</div>');
+			box.fancybox({
+				helpers : {
+					title : {
+						type : 'outside'
+					}
+				}
+			});
 		}
-
 	} else {
 		/*так же может быть вариант table.lightbox: мы должны увеличить таблицу на весь экран*/
 		/*добавляем id к блоку, чтобы потом сослаться на него*/
@@ -117,7 +123,6 @@ function lightbox() {
 
 		$('.lightbox__zoom').fancybox();
 	}
-
 }
 
 function prevNextLink() {
