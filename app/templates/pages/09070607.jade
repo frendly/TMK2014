@@ -1,0 +1,40 @@
+extends ../layouts/default
+
+block head
+	- pageTitle = 'Прочие операционные расходы';
+
+block recommend
+	- pageId = '09070607';
+	- recommend_lang = lang;
+
+block content
+	p Прочие операционные расходы за год по 31 декабря были представлены следующими статьями:
+	table.table_09.table_09070607_1
+		tr.bold
+			td
+			td.bb1 2014 г.
+			td.bb1 2013 г.
+		tr
+			td Социальные расходы и расходы на социальную инфраструктуру
+			td 16 215
+			td 19 459
+		tr
+			td Спонсорская помощь и расходы на благотворительность
+			td 8 540
+			td 14 863
+		tr
+			td Штрафы, пени и претензии
+			td 7 614
+			td 9 224
+		tr
+			td Убыток от выбытия основных средств
+			td 4 517
+			td 5 861
+		tr
+			td Прочее
+			td.bb1 6 072
+			td.bb1 2 694
+		tr.bold
+			td
+			td.bb2fff 42 958
+			td.bb2fff 52 101
