@@ -1,0 +1,27 @@
+.page09070610
+	position relative
+
+	.table_09070610_1,
+	.table_09070610_2
+		position relative
+
+		td:nth-child(n+2)
+			@extend .table_bg
+
+	.table_09070610_3
+		position relative
+
+		tr:not(:first-child) td:not(:first-child)
+			@extend .nowrap
+
+		td:not([colspan]):nth-child(4n+2)
+			@extend .table_bg
+
+	.table_09070610_4
+		position relative
+
+		tr:not(:first-child) td:not(:first-child)
+			@extend .nowrap
+
+		td:not([colspan]):nth-child(5n+2)
+			@extend .table_bg
