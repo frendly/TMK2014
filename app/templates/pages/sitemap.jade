@@ -3,5 +3,9 @@ extends ../layouts/default
 block head
 	- pageTitle = 'Карта сайта';
 
+block recommend
+	- pageId = 'sitemap';
+	- recommend_lang = lang;
+
 block content
 	include ../blocks/sitemap
