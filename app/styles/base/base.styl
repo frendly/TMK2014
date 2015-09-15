@@ -4,6 +4,13 @@ body
 	color #000
 	/*background-color #f0f0f0*/
 	background-color #FFF
+	opacity 0
+	transition visibility 0s .3s, opacity .3s linear
+
+body.show
+	opacity 1
+	transition opacity .3s linear
+
 sup
 	font-size .70em
 

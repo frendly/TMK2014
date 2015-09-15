@@ -10,6 +10,8 @@ $(function () {
 	accordion();
 
 	currentLinkToHistory();
+
+	$('body').addClass('show');
 });
 
 function activeMenuItem(el) {
