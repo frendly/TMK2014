@@ -43,8 +43,8 @@ mixin quote_3(before_quote_text, text, orange_text, blue_text, path_to_photo, so
 	- var image_link = globalPath + 'assets/images/' + path_to_photo
 
 	.quote_3__wrapper
-		a.lightbox.quote_3__link(href=image_link)
-			img.quote_3__image(src=image_link alt=alt title=alt)
+		a.lightbox.quote_3__link(href=image_link title=alt)
+			img.quote_3__image(src=image_link alt=alt)
 		span.quote_3__before_quote_text= before_quote_text
 		.quote_3
 			.quote_3__text!= text
