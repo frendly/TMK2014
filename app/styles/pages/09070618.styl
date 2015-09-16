@@ -1,0 +1,12 @@
+.page09070618
+	position relative
+
+	td
+		font-size .69em
+
+	tr:not(:first-child) td:not(:first-child)
+		@extend .nowrap
+
+	td:not([colspan]):last-child
+		@extend .table_bg
+		@extend .b10
