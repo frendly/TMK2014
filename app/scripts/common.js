@@ -105,9 +105,9 @@ function lightbox() {
 		if (box.find('.quote_3__image').width() > 350) {
 			box.append('<div class="lightbox__zoom">Увеличить</div>');
 			box.fancybox({
-				helpers : {
-					title : {
-						type : 'outside'
+				helpers: {
+					title: {
+						type: 'outside'
 					}
 				}
 			});
