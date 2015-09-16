@@ -33,6 +33,9 @@ gulp.task 'copy:components', ->
 			'jquery/dist/jquery.min.js'
 			'fotorama/fotorama.js'
 			'fancybox/source/*'
+			'jquery-sticky/jquery.sticky.js'
+			'cookies-js/dist/cookies.min.js'
+
 		],
 			base: 'components'
 			cwd: 'components'
