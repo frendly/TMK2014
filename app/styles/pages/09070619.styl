@@ -1,0 +1,38 @@
+.page09070619
+	position relative
+
+	.table_09070619_1,
+	.table_09070619_2
+		position relative
+		td
+			font-size .75em
+
+		td:not([colspan]):last-child
+			@extend .table_bg
+
+		tr:not(:first-child) td:not(:first-child)
+			@extend .nowrap
+
+
+	.table_09070619_3
+		position relative
+
+		td:not(:first-child)
+			@extend .table_bg
+
+		tr:nth-child(n+3) td:not(:first-child)
+			@extend .nowrap
+
+		td[colspan]
+			text-align center
+
+		td:nth-child(4n),
+		td[colspan]:last-child
+			@extend .b10
+
+
+	.table_09070619_4
+		position relative
+
+		tr:first-child td:last-child
+			@extend .table_bg
