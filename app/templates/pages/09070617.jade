@@ -1,0 +1,41 @@
+extends ../layouts/default
+
+block head
+	- pageTitle = 'Предоплаты и входящий НДС';
+
+block recommend
+	- pageId = '09070617';
+	- recommend_lang = lang;
+
+block content
+	p Предоплаты и входящий НДС включали:
+
+	table.table_09.table_09070617_1
+		tr.bold
+			td
+			td.bb1 2014 г.
+			td.bb1 2013 г.
+		tr
+			td Предоплата по НДС, входящий НДС
+			td 59 034
+			td 79 520
+		tr
+			td Предоплата по услугам, запасам
+			td 33 164
+			td 38 602
+		tr
+			td Предоплата по прочим налогам
+			td 8 568
+			td 13 974
+		tr
+			td Предоплата по договорам страхования
+			td 3 843
+			td 3 890
+		tr
+			td Прочие предоплаты
+			td.bb1 534
+			td.bb1 644
+		tr.bold
+			td
+			td.bb2fff 105 143
+			td.bb2fff 136 630
