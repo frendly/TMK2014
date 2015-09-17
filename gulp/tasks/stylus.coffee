@@ -29,7 +29,6 @@ gulp.task 'stylus', ->
 			'Opera >= ' + pkg.browsers.opera
 			'Safari >= ' + pkg.browsers.safari
 		)
-		.pipe gulpif !gutil.env.debug, cmq()
 		.pipe gulpif !gutil.env.debug, minifyCss()
 		.pipe gulpif gutil.env.csscomb, csscomb()
 		.pipe gulp.dest paths.styles
