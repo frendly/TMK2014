@@ -11,10 +11,19 @@
 	display inline
 	padding-right 6px
 	padding-left 12px
-	background url('../images/arrow_right_small.png') no-repeat scroll left center
+	position relative
+
+	&:before
+		content ''
+		margin-right 12px
+		display inline-block
+		sprite($arrow_right_small)
 
 	&:first-child
-		background-image none
 		padding-left 0
+
+		&:before
+			display none
+
 	&:last-child
 		text-decoration none

@@ -24,25 +24,19 @@
 
 
 	.home
-		background url('../images/home.png') no-repeat 0 0
-		width 17px
-		height 15px
 		text-indent -9999px
 		margin-top 4px
+		sprite($home)
 
 	.sitemap
-		background url('../images/sitemap.png') no-repeat 0 0
-		width 19px
-		height 13px
 		text-indent -9999px
 		margin-top 6px
+		sprite($sitemap)
 
 	.recommend
-		background url('../images/kontakt.png') no-repeat 0 0
-		width 15px
-		height 11px
 		text-indent -9999px
 		margin-top 8px
+		sprite($kontakt)
 
 /*searchform*/
 #top-wrapper .search
@@ -60,21 +54,14 @@
 	float left
 	font-size 11px
 	background-color #D8D8D8
-	height 24px
 	line-height 13px
 	padding 3px 2px 2px 10px
-	width 171px
-	background-image url('../images/search_bg.png')
-	background-position 0 0
-	background-repeat no-repeat
+	sprite($search_bg)
+
 
 .searchform #search_submit
 	position relative
 	vertical-align middle
 	cursor pointer
-	width 26px
-	height 24px
 	float left
-	background-image url('../images/search_icon.png')
-	background-position 0 0
-	background-repeat no-repeat
+	sprite($search_icon)
