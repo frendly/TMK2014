@@ -2,30 +2,36 @@
 	position relative
 
 	& > a
+		position relative
 		display block
 		padding-left 24px
 		margin-bottom 7px
-		background-repeat: no-repeat
+		background-repeat no-repeat
 		color $default_block_text
+
+		&:before
+			content ''
+			display inline-block
+			position absolute
+			left 0
 
 .tools__title
 	h4()
 
-.tools__print
-	background-image: url('../images/toolPrint.png');
+.tools__print:before
+	sprite($toolPrint)
 
-.tools__recommend
-	background-image: url('../images/toolRecommend.png');
+.tools__recommend:before
+	sprite($toolRecommend)
 
-.tools__analyser
-	background-image: url('../images/toolQuick.png');
+.tools__analyser:before
+	sprite($toolQuick)
 
-.tools__download
-	background-image: url('../images/toolDownload.png');
+.tools__download:before
+	sprite($toolDownload)
 
-.tools__glossary
-	background-image: url('../images/toolGlossary.png');
-	background-position 0 2px
+.tools__glossary:before
+	sprite($toolGlossary)
 
-.tools__compare
-	background-image: url('../images/toolCompare.png');
+.tools__compare:before
+	sprite($toolCompare)

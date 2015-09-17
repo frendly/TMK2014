@@ -1,8 +1,14 @@
 .acc_heading
 	cursor pointer
-	background url('../images/accordion/icon-open.gif') no-repeat scroll 0 4px
 	padding-left 16px
+	position relative
 
-.acc_open
-	background url('../images/accordion/icon-close.gif') no-repeat scroll 0 4px
-	padding-left 16px
+	&:before
+		content ''
+		position absolute
+		top 4px
+		left 0
+		sprite($icon-open)
+
+.acc_open:before
+	sprite($icon-close)
