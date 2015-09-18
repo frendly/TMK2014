@@ -1,0 +1,27 @@
+.page09070623
+	position relative
+
+	.table_09070623_1
+		position relative
+
+		td:nth-child(n+2)
+			@extend .table_bg
+
+		td:last-child
+			@extend .b10
+
+
+	.table_09070623_2
+		position relative
+
+		td:nth-child(1)
+			width 25%
+
+		td:nth-child(2)
+			text-align left
+
+		td:nth-last-child(3),
+		td:last-child
+			@extend .table_bg
+			@extend .nowrap
+			text-align center
