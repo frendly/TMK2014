@@ -1,0 +1,29 @@
+.page09070628
+	position relative
+
+	.table_09070628_1
+		tr:first-child td:last-child,
+		tr:nth-child(2) td:nth-last-of-type(-n+2)
+			@extend .table_bg
+			text-align right
+
+		td
+			padding-left 15px
+
+		td > h3
+				margin-left -15px
+
+
+		td:last-child
+			@extend .b10
+
+	.table_09070628_2
+		tr:first-child,
+		tr:nth-child(2)
+			td:not([rowspan])
+				@extend .table_bg
+				text-align center
+
+			td:not([colspan]):nth-last-of-type(2),
+			td[colspan]:last-child
+				@extend .b10
