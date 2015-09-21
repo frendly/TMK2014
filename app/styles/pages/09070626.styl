@@ -1,0 +1,42 @@
+.page09070626
+	position relative
+
+	.table_09070626_1
+		td[colspan]
+			text-align center
+
+		td:not([colspan]):nth-last-of-type(-n+2),
+		td[colspan]:last-child
+			@extend .table_bg
+
+		td:not(:first-child)
+			@extend .nowrap
+
+		td:nth-child(2n+4),
+		td[colspan]:last-child
+			@extend .b10
+
+	.table_09070626_2
+		td[colspan]
+			text-align center
+
+		tr:first-child,
+		tr:nth-child(2)
+			position relative
+
+			td:not(:first-child)
+				@extend .table_bg
+
+			td:nth-child(2n+2),
+			td[colspan]
+				@extend .b10
+
+	.table_09070626_3
+		td[colspan]
+			text-align center
+		tr:nth-child(-n + 3)
+			td:not(:first-child)
+				@extend .table_bg
+			td[colspan],
+			td:nth-last-of-type(2n)
+				@extend .b10
