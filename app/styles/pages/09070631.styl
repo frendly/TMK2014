@@ -1,0 +1,17 @@
+.page09070631
+	position relative
+
+	.table_09070631_1,
+	.table_09070631_2
+		td:nth-last-of-type(-n+2)
+			@extend .table_bg
+
+		td:last-child
+			@extend .b10
+
+	.table_09070631_3
+		tr:first-child td:not(:first-child),
+		tr:nth-child(2) td:not(:first-child),
+		td:nth-last-of-type(-n+2)
+			@extend .table_bg
+			@extend .nowrap
