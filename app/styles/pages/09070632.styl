@@ -1,0 +1,51 @@
+.page09070632
+	position relative
+
+	.table_09070632_1,
+	.table_09070632_2,
+	.table_09070632_8,
+	.table_09070632_9
+		td:nth-last-of-type(-n+2)
+			@extend .table_bg
+
+		td:last-child
+			@extend .b10
+
+	.table_09070632_3,
+	.table_09070632_4
+		position relative
+
+		tr:nth-child(-n+3) td:not(:first-child)
+			text-align center
+			@extend .table_bg
+
+	.table_09070632_5,
+	.table_09070632_6
+		position relative
+
+		tr:not(:first-child) td:not(:first-child)
+			@extend .nowrap
+
+		td:last-child
+			@extend .table_bg
+
+	.table_09070632_7
+		position relative
+
+		tr:first-child td
+			text-align center
+
+		td:not(:first-child)
+			@extend .table_bg
+			@extend .b10
+
+	.table_09070632_10
+		tr:first-child td
+			text-align center
+
+		td:not(:first-child)
+			@extend .table_bg
+
+		tr:nth-child(1) td:last-child,
+		tr:not(:first-child) td:nth-last-of-type(2)
+			@extend .b10
