@@ -1,0 +1,13 @@
+extends ../layouts/english
+
+block head
+	- pageTitle = 'Профиль компании';
+
+block recommend
+	- pageId = '01';
+	- recommend_lang = lang;
+
+block content
+	p ENG
+
+	img.inner_cover(src=globalPath + 'assets/images/01/01.jpg' alt=pageTitle)
