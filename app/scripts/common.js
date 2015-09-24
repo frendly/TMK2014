@@ -140,10 +140,8 @@ function prevNextLink() {
 	if (activeLinkIndex + 1 < menuLink.length) {
 		nextPageIndex = activeLinkIndex + 1;
 	}
+	nextPageLink = menuLink.eq(nextPageIndex).prop('href');
 
-	nextPageLink = menuLink.eq(nextPageIndex).clone()
-												.text('Следующая страница')
-												.removeClass().addClass('prev-next-navigation__next');
 
 	// prev link
 	if (activeLinkIndex - 1 > 0) {
@@ -152,11 +150,15 @@ function prevNextLink() {
 		prevPageIndex = menuLink.length - 1;
 	}
 
-	prevPageLink = menuLink.eq(prevPageIndex).clone()
-												.text('Предыдущая страница')
-												.removeClass().addClass('prev-next-navigation__prev');
+	prevPageLink = menuLink.eq(prevPageIndex).prop('href');
+	console.log(prevPageLink);
 
-	$('.prev-next-navigation').prepend(prevPageLink, nextPageLink).sticky({topSpacing: 20}); /* STICKY BLOCK */
+	$('.prev-next-navigation')
+		.find('.prev-next-navigation__prev').prop('href', prevPageLink)
+		.end()
+		.find('.prev-next-navigation__next').prop('href', nextPageLink)
+		.end()
+	.sticky({topSpacing: 20}); /* STICKY BLOCK */
 }
 
 function accordion() {
