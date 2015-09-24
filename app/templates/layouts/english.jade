@@ -3,8 +3,6 @@
 include ../helpers/variables
 include ../helpers/mixins
 
-+script([], ['debug.js', 'common.min.js'])
-
 doctype html
 html(lang='#{lang}')
 	include ../blocks/head
@@ -13,8 +11,24 @@ html(lang='#{lang}')
 	body(class='page' + pageId)
 		include ../blocks/top-wrapper
 		.main
-			include ../blocks/main-menu
-			block content
-			include ../blocks/footer
+			#top-navigation
+				.content
+					include ../blocks/logo
+					include ../blocks/main-menu
+					include ../blocks/banner
+					include ../blocks/breadcrumb
+					include ../blocks/select-menu
+			aside.aside
+				include ../blocks/sub-menu
+				include ../blocks/history
+				include ../blocks/annual-report
+				include ../blocks/tools
+				include ../blocks/next-prev-navigation
+			#content
+				block head
+				h1= pageTitle
+
+				block content
+		include ../blocks/footer
 
 		include ../blocks/scripts
