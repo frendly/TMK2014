@@ -1,5 +1,12 @@
-.annual-report
-	h4.annual-report__title Мой годовой отчет
+if lang === 'ru'
+	.annual-report
+		h4.annual-report__title Мой годовой отчет
 
-	a.annual-report__link(href='#') Сохранить страницу
-	a.annual-report__link(href='#') Посмотреть сохраненные страницы (0)
+		a.annual-report__link(href='#') Сохранить страницу
+		a.annual-report__link(href='#') Посмотреть сохраненные страницы (0)
+else
+	.annual-report
+		h4.annual-report__title My Annual Report
+
+		a.annual-report__link(href='#') Store page
+		a.annual-report__link(href='#') Retrieve My Annual Report (0)
