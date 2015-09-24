@@ -1,15 +1,29 @@
 block recommend
 #top-wrapper
 	.content
-		ul
-			li: a.home(href='/') Главная
-			li: a.sitemap(href='sitemap.html') Карта сайта
-			if pageId !== undefinded
-				li: a.recommend(href='recommend.html?index=#{pageId}&lang=#{recommend_lang}') Рекомендовать отчет
-			li: a(href='contact.html') Контакты
-			li: include ../blocks/switch-language
-			li: .search
-				form.searchform(method="post")
-					#search_wrapper
-						input#search_keywords(type='text' name='search_keywords' value='' maxlength='250' placeholder='Поиск...')
-						#search_submit
+		if lang === 'ru'
+			ul
+				li: a.home(href='/') Главная
+				li: a.sitemap(href='sitemap.html') Карта сайта
+				if pageId !== undefinded
+					li: a.recommend(href='recommend.html?index=#{pageId}&lang=#{recommend_lang}') Рекомендовать отчет
+				li: a(href='contact.html') Контакты
+				li: include ../blocks/switch-language
+				li: .search
+					form.searchform(method="post")
+						#search_wrapper
+							input#search_keywords(type='text' name='search_keywords' value='' maxlength='250' placeholder='Поиск...')
+							#search_submit
+		else
+			ul
+				li: a.home(href='index_en.html') Home
+				li: a.sitemap(href='sitemap_en.html') Sitemap
+				if pageId !== undefinded
+					li: a.recommend(href='recommend_en.html?index=#{pageId}&lang=#{recommend_lang}') Recommend page
+				li: a(href='contact_en.html') Contacts
+				li: include ../blocks/switch-language
+				li: .search
+					form.searchform(method="post")
+						#search_wrapper
+							input#search_keywords(type='text' name='search_keywords' value='' maxlength='250' placeholder='Search')
+							#search_submit
