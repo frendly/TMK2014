@@ -1,9 +1,20 @@
-.tools
-	h4.tools__title Инструментарий
+if lang === 'ru'
+	.tools
+		h4.tools__title Инструментарий
 
-	a.tools__print(href='#') Распечатать страницу
-	a.tools__recommend(href='#') Рекомендовать отчет
-	a.tools__analyser(href='#') Интерактивный анализ
-	a.tools__download(href='#') Центр загрузки
-	a.tools__glossary(href='#') Список принятых сокращений
-	a.tools__compare(href='#') Сравнить с 2013
+		a.tools__print(href='#' ) Распечатать страницу
+		a.tools__recommend(href='#') Рекомендовать отчет
+		a.tools__analyser(href='#') Интерактивный анализ
+		a.tools__download(href='#') Центр загрузки
+		a.tools__glossary(href='#') Список принятых сокращений
+		a.tools__compare(href='http://report2013.tmk-group.ru/reports/tmk/annual/2013/gb/Russian/0.html' target='_blank') Сравнить с 2013
+else
+	.tools
+		h4.tools__title Tools
+
+		a.tools__print(href='#' ) Print page
+		a.tools__recommend(href='#') Recommend page
+		a.tools__analyser(href='#') Quick Analyser
+		a.tools__download(href='#') Download Center
+		a.tools__glossary(href='#') Glossary
+		a.tools__compare(href='http://report2013.tmk-group.ru/reports/tmk/annual/2013/gb/English/0/home.html' target='_blank') Compare to 2013

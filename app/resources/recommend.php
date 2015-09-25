@@ -8,8 +8,12 @@ if ($action === "submit") {
     $emailSendTo = $_REQUEST['emailSendTo'];
     $message = $_REQUEST['message'];
     $page = $_REQUEST['page'];
-
     $lang = $_REQUEST['lang'];
+
+    $page = ($lang === "ru") ? $page : $page.'_en';
+    $link = $_SERVER['HTTP_HOST'].'/'.$page.'.html';
+
+
 
     if($lang === "ru") {
         $subject = "Рекомендация онлайн годового отчета TMK";
@@ -21,7 +25,7 @@ if ($action === "submit") {
     $message
 
 
-    $page
+    $link
 
     Обратите внимание, что адрес электронной почты отправителя не был проверен.
 
@@ -39,7 +43,7 @@ if ($action === "submit") {
     $message
 
 
-    $page
+    $link
 
     Please note, the sender's e-mail address has not been verified.
 
@@ -57,5 +61,6 @@ if ($action === "submit") {
 		$from = "From: TMK<$senderEmail>\r\nReturn-path: $senderEmail";
 		mail($emailSendTo, $subject, $fullMessage, $from);
 		echo "Email sent!";
+        header("Location: /");
 		}
 	}
