@@ -1,14 +1,33 @@
-p Пожалуйста, заполните поля и выберите пункт "Отправить", чтобы переслать Ваши рекомендации. Поля отмеченные звездочкой (*) являются обязательными.
+if lang === "ru"
+	p Пожалуйста, заполните поля и выберите пункт "Отправить", чтобы переслать Ваши рекомендации. Поля отмеченные звездочкой (*) являются обязательными.
 
+	form.recommend(action='recommend.php' method='POST' enctype='multipart/form-data')
+		input(name='action' type='hidden' value='submit')
+		input(class='input_recommend_page' name='page' type='hidden' value='')
+		input(class='input_recommend_lang' name='lang' type='hidden' value='')
 
-form(action='recommend.php' method='POST' enctype='multipart/form-data')
-	input(name='action' type='hidden' value='submit')
-	input(class='input_recommend_page' name='page' type='hidden' value='')
-	input(class='input_recommend_lang' name='lang' type='hidden' value='')
+		p: input(name='senderName' type='text' placeholder='Имя отправителя')
+		p: input(name='senderEmail' type='email' placeholder='Эл. адрес отправителя' required)
+		p: input(name='receiverName' type='text' placeholder='Имя получателя')
+		p: input(name='emailSendTo' type='email' placeholder='Эл. адрес получателя' required)
+		p: textarea(name='message' placeholder='Сообщение')
+		p: input(type='submit')
 
-	p: input(name='senderName' type='text' placeholder='Имя отправителя')
-	p: input(name='senderEmail' type='email' placeholder='Эл. адрес отправителя' required)
-	p: input(name='receiverName' type='text' placeholder='Имя получателя')
-	p: input(name='emailSendTo' type='email' placeholder='Эл. адрес получателя' required)
-	p: textarea(name='message' placeholder='Сообщение')
-	p: input(type='submit')
+	p.recommend__afterSend Сообщение отправлено.
+
+if lang === "en"
+	p Please fill-in the input fields below and select "send" to submit your recommendation. Inputs marked with an asterisk (*) are mandatory.
+
+	form.recommend(action='recommend.php' method='POST' enctype='multipart/form-data')
+		input(name='action' type='hidden' value='submit')
+		input(class='input_recommend_page' name='page' type='hidden' value='')
+		input(class='input_recommend_lang' name='lang' type='hidden' value='')
+
+		p: input(name='senderName' type='text' placeholder='Name of sender')
+		p: input(name='senderEmail' type='email' placeholder='Email address of sender' required)
+		p: input(name='receiverName' type='text' placeholder='Name of recipient')
+		p: input(name='emailSendTo' type='email' placeholder='Email address of recipient' required)
+		p: textarea(name='message' placeholder='Your message')
+		p: input(type='submit' value='Send')
+
+	p.recommend__afterSend Email sent.
