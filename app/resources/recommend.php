@@ -61,5 +61,6 @@ if ($action === "submit") {
 		$from = "From: TMK<$senderEmail>\r\nReturn-path: $senderEmail";
 		mail($emailSendTo, $subject, $fullMessage, $from);
 		echo "Email sent!";
+        header("Location: /");
 		}
 	}
