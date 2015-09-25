@@ -8,6 +8,7 @@ $(function () {
 	prevNextLink();
 	lightbox();
 	accordion();
+	formSubmit();
 
 	currentLinkToHistory();
 
@@ -233,3 +234,23 @@ function createHistoryList() {
 }
 
 /* END HISTORY FUNCTION BLOCK */
+
+
+/*form submit*/
+function formSubmit() {
+	$('.recommend_form').submit(function () {
+		var url = '/recommend.php';
+
+		$.ajax({
+			type: 'POST',
+			url: url,
+			data: $(this).serialize(),
+			success: function () {
+				$('.recommend').hide();
+				$('.recommend__afterSend').show();
+			}
+		});
+
+		return false;
+	});
+}
