@@ -3,7 +3,7 @@ if lang === 'ru'
 		h4.tools__title Инструментарий
 
 		a.tools__print(href='#' ) Распечатать страницу
-		a.tools__recommend(href='#') Рекомендовать отчет
+		a.tools__recommend(href='recommend.html?index=#{pageId}&lang=#{recommend_lang}') Рекомендовать отчет
 		a.tools__analyser(href='#') Интерактивный анализ
 		a.tools__download(href='#') Центр загрузки
 		a.tools__glossary(href='#') Список принятых сокращений
@@ -13,7 +13,7 @@ else
 		h4.tools__title Tools
 
 		a.tools__print(href='#' ) Print page
-		a.tools__recommend(href='#') Recommend page
+		a.tools__recommend(href='recommend_en.html?index=#{pageId}&lang=#{recommend_lang}') Recommend page
 		a.tools__analyser(href='#') Quick Analyser
 		a.tools__download(href='#') Download Center
 		a.tools__glossary(href='#') Glossary
