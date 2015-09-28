@@ -8,6 +8,7 @@ $(function () {
 	prevNextLink();
 	lightbox();
 	accordion();
+	printPage();
 	formSubmit();
 
 	currentLinkToHistory();
@@ -236,7 +237,12 @@ function createHistoryList() {
 /* END HISTORY FUNCTION BLOCK */
 
 
-/*form submit*/
+function printPage() {
+	$('.tools__print').click(function () {
+		window.print();
+	});
+}
+
 function formSubmit() {
 	$('.recommend_form').submit(function () {
 		var url = '/recommend.php';
