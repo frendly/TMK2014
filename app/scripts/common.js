@@ -8,7 +8,11 @@ $(function () {
 	prevNextLink();
 	lightbox();
 	accordion();
+<<<<<<< HEAD
+	printPage();
+=======
 	formSubmit();
+>>>>>>> master
 
 	currentLinkToHistory();
 
@@ -236,6 +240,11 @@ function createHistoryList() {
 /* END HISTORY FUNCTION BLOCK */
 
 
+<<<<<<< HEAD
+function printPage () {
+	$('.tools__print').click(function () {
+		window.print();
+=======
 /*form submit*/
 function formSubmit() {
 	$('.recommend_form').submit(function () {
@@ -250,6 +259,7 @@ function formSubmit() {
 				$('.recommend__afterSend').show();
 			}
 		});
+>>>>>>> master
 
 		return false;
 	});
