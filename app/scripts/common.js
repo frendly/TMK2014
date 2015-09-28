@@ -8,6 +8,7 @@ $(function () {
 	prevNextLink();
 	lightbox();
 	accordion();
+	printPage();
 
 	currentLinkToHistory();
 
@@ -231,3 +232,12 @@ function createHistoryList() {
 }
 
 /* END HISTORY FUNCTION BLOCK */
+
+
+function printPage () {
+	$('.tools__print').click(function () {
+		window.print();
+
+		return false;
+	});
+}
