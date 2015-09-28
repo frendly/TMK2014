@@ -1,2 +1,6 @@
-a#logo(href="/")
-	img(src=globalPath + 'assets/images/logo.png' alt='logo' title='TMK')
+if lang === 'ru'
+	a#logo(href="/")
+		img(src=globalPath + 'assets/images/logo.png' alt='логотип компании' title='ТМК')
+else
+	a#logo(href="index_en.html")
+		img(src=globalPath + 'assets/images/logo.png' alt='logo' title='TMK')
