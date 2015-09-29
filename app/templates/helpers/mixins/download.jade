@@ -1,0 +1,12 @@
+mixin downloadItem(name, link)
+	- var format = link.split('.').pop();
+	if format === 'pdf'
+		- var fullLink = pdfPath + link;
+	if format === 'xlsx'
+		- var fullLink = xlsxPath + link;
+	tr
+		td
+			a(href=fullLink target='_blank' title='Открыть pdf файл')= name
+		td.format= format
+		td.checkbox
+			input(name='files[]' type='checkbox' value=fullLink)
