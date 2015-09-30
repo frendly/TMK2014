@@ -1,0 +1,4 @@
+mixin mail(email, name)
+	- var text = name || email;
+	| &nbsp;
+	a.mailto(href='mailto:' + email target='_blank')= text
