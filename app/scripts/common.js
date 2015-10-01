@@ -11,7 +11,7 @@ $(function () {
 	printPage();
 	formSubmit();
 
-	currentLinkToHistory();
+	addLinkToCookie('history');
 
 	$('body').addClass('show');
 });
@@ -179,54 +179,59 @@ function accordion() {
 }
 
 /* HISTORY FUNCTION */
-function currentLinkToHistory() {
+/*currentLinkToHistory*/
+function addLinkToCookie(cookieName) {
 	var title = document.title,
 		href = document.location.href,
 		data = {
 			title: title,
 			href: href
 		},
-		history = getHistoryCookie(),
+		/*history*/
+		cookie = getCookie(cookieName),
+		/*getHistoryCookie*/
 		found;
 
 	// проверяем на дубли
-	found = history.some(function (item) {
+	found = cookie.some(function (item) {
 		return item.title === data.title;
 	});
 
 	// добавляем новый элемент, если нет дублей
 	if (!found) {
 		// если элементов много, удаляем первый
-		if (history.length > 2) {
-			history.shift();
+		if (cookie.length > 2) {
+			cookie.shift();
 		}
 
-		history.push(data);
-		history = JSON.stringify(history);
-		Cookies.set('history', history);
+		cookie.push(data);
+		cookie = JSON.stringify(cookie);
+		Cookies.set(cookieName, cookie);
 	}
 
-	createHistoryList();
+	createListFromCookie(cookieName);
 }
 
-function getHistoryCookie() {
+/*getHistoryCookie*/
+function getCookie(cookieName) {
 	// парсим куку
-	var history = Cookies.get('history');
+	var cookie = Cookies.get(cookieName);
 
-	if (history !== undefined && history !== '') {
-		history = $.parseJSON(history); // если кука существует, преобразуем строку в объект
+	if (cookie !== undefined && cookie !== '') {
+		cookie = $.parseJSON(cookie); // если кука существует, преобразуем строку в объект
 	} else {
-		history = [];
+		cookie = [];
 	}
-	return history;
+	return cookie;
 }
 
-function createHistoryList() {
-	var history = getHistoryCookie(),
+/*createHistoryList*/
+function createListFromCookie(cookieName) {
+	var cookie = getCookie(cookieName),
 		output = '';
 
 	// формируем вывод ссылок из куки в DOM
-	$.each(history, function (i, item) {
+	$.each(cookie, function (i, item) {
 		output += '<a class="history__link" href=' + item.href + '>' + item.title + '</a>';
 	});
 
