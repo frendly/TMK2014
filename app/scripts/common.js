@@ -12,6 +12,7 @@ $(function () {
 	formSubmit();
 
 	addLinkToCookie('history');
+	myreport();
 
 	$('body').addClass('show');
 });
@@ -332,4 +333,25 @@ function formSubmit() {
 
 		return false;
 	});
+}
+
+function myreport() {
+	counterCookieItems();
+	checkAll();
+
+	$('.myreport__save').click(function () {
+		addLinkToCookie('myreport');
+		counterCookieItems('animate');
+
+		return false;
+	});
+
+	$('.myreport__delete').click(function () {
+		removeCookie('myreport');
+		$('.myreport__items').parent().hide();
+		$('.myreport__nopage').show();
+		counterCookieItems('animate');
+
+	});
+	$('.pagemyreport').on('load', createListForMyreport());
 }
