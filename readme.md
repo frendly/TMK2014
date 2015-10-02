@@ -162,3 +162,13 @@ gulp imagemin
 * `app/resources/assets/fonts/` - папка для шрифтов, *по умолчанию папки нет*.
 * `app/resources/assets/images/svg/` - папка для векторных изображений SVG, *по умолчанию папки нет*.
 * `dist/` - сборка сайта, по умолчанию её может не быть и можно без страха и риска её удалить, т.к. она генерируется каждый раз заново, при сборке всё её содержимое удаляется, поэтому руками в неё класть ничего не нужно.
+
+## Компоненты
+* [`animate.css`](https://github.com/daneden/animate.css)
+* [`cookies-js`](https://github.com/ScottHamper/Cookies)
+* [`fotorama`](http://fotorama.io/)
+* [`fancybox`](http://fancyapps.com/fancybox/)
+* [`jquery`](https://github.com/jquery/jquery)
+* [`jQuery.print`](https://doersguild.github.io/jQuery.print/)
+* [`jquery-sticky`](https://github.com/garand/sticky)
+* [`svg4everybody`](https://github.com/jonathantneal/svg4everybody)
