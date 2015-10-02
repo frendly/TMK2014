@@ -236,6 +236,10 @@ function createListFromCookie(cookieName) {
 	});
 
 	$('.history__items').empty().append(output);
+function checkAll() {
+	$('#checkAll').change(function () {
+		$('input:checkbox').prop('checked', $(this).prop('checked'));
+	});
 }
 
 /* END HISTORY FUNCTION BLOCK */
