@@ -7,3 +7,27 @@
 .annual-report__link
 	color $default_block_text
 	display block
+
+.myreport__counter
+	position relative
+
+	&:after
+		content '(' attr(data-counter) ')'
+		display inline-block
+		margin-left 5px
+
+.myreport__nopage
+	display none
+
+.myreport__checkAll_container td
+	padding-bottom 10px
+
+.myreport__items input
+	width auto
+
+.myreport__download
+	float right
+
+	i
+		display inline-block
+		sprite($download)
