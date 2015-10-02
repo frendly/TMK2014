@@ -242,6 +242,9 @@ function checkAll() {
 	});
 }
 
+function removeCookie(cookieName) {
+	Cookies(cookieName, undefined);
+}
 /* END HISTORY FUNCTION BLOCK */
 
 
