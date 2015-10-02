@@ -200,7 +200,7 @@ function addLinkToCookie(cookieName) {
 	// добавляем новый элемент, если нет дублей
 	if (!found) {
 		// если элементов много, удаляем первый
-		if (cookie.length > 2) {
+		if (cookie.length > 2 && cookieName !== 'myreport') {
 			cookie.shift();
 		}
 
@@ -209,7 +209,12 @@ function addLinkToCookie(cookieName) {
 		Cookies.set(cookieName, cookie);
 	}
 
-	createListFromCookie(cookieName);
+	if (cookieName === 'history') {
+		createListForHistory();
+	}
+	if (cookieName === 'myreport') {
+		createListForMyreport();
+	}
 }
 
 /*getHistoryCookie*/
@@ -225,9 +230,33 @@ function getCookie(cookieName) {
 	return cookie;
 }
 
+function counterCookieItems(animation) {
+	var cookie = getCookie('myreport'),
+		counter = 0;
+
+	$.each(cookie, function (i) {
+		counter++;
+	});
+	$('.myreport__counter').attr('data-counter', counter);
+
+	if (animation === 'animate') {
+		animate($('.myreport__counter'), 'bounceIn');
+	}
+}
+
+function animate(element_ID, animation) {
+	$(element_ID).addClass(animation);
+	var wait = window.setTimeout(function () {
+		$(element_ID).removeClass(animation);
+	}, 1300
+	);
+}
+
 /*createHistoryList*/
-function createListFromCookie(cookieName) {
-	var cookie = getCookie(cookieName),
+function createListForHistory(cookieName) {
+	var cookieName = 'history',
+		cookie = getCookie(cookieName),
+		container = '.' + cookieName + '__items',
 		output = '';
 
 	// формируем вывод ссылок из куки в DOM
@@ -235,11 +264,44 @@ function createListFromCookie(cookieName) {
 		output += '<a class="history__link" href=' + item.href + '>' + item.title + '</a>';
 	});
 
-	$('.history__items').empty().append(output);
+	$(container).empty().append(output);
+}
 function checkAll() {
 	$('#checkAll').change(function () {
 		$('input:checkbox').prop('checked', $(this).prop('checked'));
 	});
+}
+
+function createListForMyreport() {
+	var cookieName = 'myreport',
+		cookie = getCookie(cookieName),
+		container = '.myreport__items',
+		pathToFile = $('.myreport__items').attr('data-download-path'),
+		output = '',
+		regex = /\d+/,
+		pageID,
+		segment,
+		fullLink;
+
+	// формируем вывод ссылок из куки в DOM
+	if (cookie.length > 0) {
+		$.each(cookie, function (i, item) {
+			segment = (item.href.substr(item.href.lastIndexOf('/') + 1));
+			pageID = segment.match(regex)[0];
+			fullLink = pathToFile + pageID + '.pdf';
+
+
+			output += '<tr>';
+			output += '<td><a class="myreport__link" href=' + item.href + '>' + item.title + '</a></td>';
+			output += '<td><input type="checkbox" checked name="files[]" value=' + fullLink + '></td>';
+			output += '</tr>';
+		});
+	} else {
+		$(container).parent().hide();
+		$('.myreport__nopage').show();
+	}
+
+	$(container).append(output);
 }
 
 function removeCookie(cookieName) {
