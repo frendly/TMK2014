@@ -1,0 +1,129 @@
+{
+   colors: ["#009EE0", "#B4AEAE", "#143F82", "#4D74A8", "#73CEE8", "#CCEEF7", "#83D0F0", "#796E6B", "#A0B4BF", "#DAD5D0", "#3E3E3E", "#FF9147"],
+   chart: {
+      width: 700,
+      //marginLeft: 180,
+      //marginRight: 0,
+      backgroundColor: 'none',
+      borderWidth: 0,
+      borderRadius: 0,
+      plotBackgroundColor: null,
+      plotShadow: false,
+      shadow:false,
+      plotBorderWidth: 0
+   },
+   xAxis: {
+      gridLineWidth: 0,
+      lineColor: "#E9EDF5",
+      tickColor: "#E9EDF5",
+      labels: {
+         style: {
+            color: '#000000',
+            fontWeight: 'bold'
+         }
+      },
+      title: {
+         style: {
+            color: '#000000',
+            font: 'bold 12px Verdana, Arial, Helvetica, sans-serif'
+         }
+      }
+   },
+   yAxis: {
+      alternateGridColor: null,
+      minorTickInterval: null,
+      gridLineColor: "#E9EDF5",
+      lineColor: "#E9EDF5",
+      lineWidth: 0,
+      tickWidth: 0,
+      labels: {
+         formatter: function() {
+            result = this.value;
+            if (this.value > 1000000) { result = Math.floor(this.value / 1000000) + "M" }
+            else if (this.value < 0) { result = Math.floor(this.value / 1000000) + "M" }
+            else if (this.value >= 1000) { result = Math.floor(this.value / 1000) + "k" }
+            return result;
+         },
+         align: 'left',
+         style: {
+            color: '#000',
+            fontWeight: 'normal'
+         }
+      },
+      title: {
+         x: -10,
+         style: {
+            color: '#000',
+            font: 'bold 12px Lucida Grande, Lucida Sans Unicode, Verdana, Arial, Helvetica, sans-serif'
+         }
+      }
+   },
+   legend: {
+      itemStyle: {
+         color: '#000'
+      },
+      itemHoverStyle: {
+         color:  "#143F82"
+      },
+      itemHiddenStyle: {
+         color:  "#E9EDF5"
+      },
+      y: 5
+   },
+   labels: {
+      style: {
+         color: '#CCC'
+      }
+   },
+   tooltip: {
+      backgroundColor:  "#E9EDF5",
+      borderWidth: 0,
+      style: {
+         color: "#143F82"
+      }
+   },
+
+
+   plotOptions: {
+      line: {
+         dataLabels: {
+            color: '#CCC'
+         },
+         marker: {
+            lineColor: '#333'
+         }
+      }
+   },
+
+   toolbar: {
+      itemStyle: {
+         color: '#CCC'
+      }
+   },
+
+   navigation: {
+      buttonOptions: {
+         backgroundColor: {
+            linearGradient: [0, 0, 0, 20],
+            stops: [
+               [0.4, '#606060'],
+               [0.6, '#333333']
+            ]
+         },
+         borderColor: '#000000',
+         symbolStroke: '#C0C0C0',
+         hoverSymbolStroke: '#FFFFFF'
+      }
+   },
+
+   exporting: {
+      buttons: {
+         exportButton: {
+            symbolFill: '#55BE3B'
+         },
+         printButton: {
+            symbolFill: '#7797BE'
+         }
+      }
+   }
+}

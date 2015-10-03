@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>TMK - Key Figure Comparison</title>
+	<!--<script type="text/javascript" src="/js/lib/jquery-1.4.2.min.js"></script>
+	<script type="text/javascript" src="/qas4.js"></script>-->
+
+	<script type="text/javascript" src="js/lib/jquery-1.10.2.min.js"></script>
+	<script type="text/javascript" src="qas4.js?v=3"></script>
+
+	<style type="text/css">
+		body > div {
+			width:100%;
+			margin:0;
+			min-height:200px;
+			padding:0px;
+		}
+		.dataTable {
+			width: 100% !important;
+		}
+		.q4head {
+			cursor: pointer;
+		}
+		body { margin: 0; padding: 0;}
+		#toggleInactiveRowsCheckbox { position: relative; top: -2px; }
+		li.notfirst { line-height: 2em; }
+
+		div.print input,
+		div.print div.showYearsDropDownBox,
+		div.print label,
+		div.print img {
+			display: none !important;
+		}
+
+		div.print * {
+			font-family: Verdana, sans-serif !important;
+			font-size: 12px !important;
+		}
+		#exportIMGButton {
+			display: none !important;
+		}
+
+		#exportImageSelect a {
+			display: block;
+			font-size: 11px;
+			line-height: 11px;
+			font-family: Verdana, Helvetica, sans-serif;
+			text-decoration: none;
+			color: #333;
+			background-repeat: no-repeat;
+			padding-left: 20px;
+		}
+
+		.exportJPGButton {
+			margin-bottom: 6px;
+			background-image: url(img/buttons/png/buttonExportJPG.png);
+		}
+
+		.exportPNGButton {
+			margin-bottom: 6px;
+			background-image: url(img/buttons/png/buttonExportPNG.png);
+		}
+
+/* 		.exportPDFButton {
+	margin-bottom: 3px;
+	background-image: url(img/buttons/png/buttonExportPDF.png);
+}
+ */
+		#exportImageSelect a:hover {
+			text-decoration: underline;
+		}
+
+		#okayButton:hover,
+		#cancelButton:hover {
+			background: white !important;
+		}
+
+		.chartContainer {
+			margin: auto;
+			width: 933px;
+			padding-bottom: 20px;
+		}
+	</style>
+	<!--[if lte IE 6]>
+		<style type="text/css">
+			img.dropUpButton, img.dropDownButton, img.removeRowButton, img.addRowButton,
+			img.removeCategoryButton, img.addCategoryButton { margin-top: 4px; }
+		</style>
+	<![endif]-->
+<script type="text/javascript">
+	$(document).ready(function() {
+		var type = location.search.split('type=')[1] ? location.search.split('type=')[1] : 'consolidated_en';
+		var arr = new Array (
+			'consolidated_en',
+			'consolidated_ru',
+			'russia_en',
+			'russia_ru',
+			'americas_en',
+			'americas_ru',
+			'europe_en',
+			'europe_ru',
+			'consolidated_interim_en',
+			'consolidated_interim_ru',
+			'russia_interim_en',
+			'russia_interim_ru',
+			'americas_interim_en',
+			'americas_interim_ru',
+			'europe_interim_en',
+			'europe_interim_ru'
+		);
+		if ($.inArray(type, arr)!==-1) {
+			var file = 'tmk_'+type+'.json';
+			buildQas4('kennzahlenvergleich', 'tmk_'+type+'.json');
+		} else {
+			buildQas4('kennzahlenvergleich', 'tmk_consolidated_en.json');
+		}
+	});
+</script>
+</head>
+<body>
+	<div>
+		<div id="kennzahlenvergleich">
+		Javascript is required to run this website. Please enable javascript in your browser!
+		</div>
+	</div>
+</body>
+</html>
