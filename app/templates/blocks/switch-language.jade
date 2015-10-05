@@ -4,5 +4,5 @@ if lang === 'en'
 	- var switchLink = globalPath + pageId + '.html'
 	a.switch-language(href=switchLink) RU
 else
-	- var switchLink = pageId + '_en.html'
+	- var switchLink = globalPath + 'en/' + pageId + '.html'
 	a.switch-language(href=switchLink) EN

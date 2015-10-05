@@ -13,8 +13,8 @@ else
 		h4.tools__title Tools
 
 		a.tools__print(href='#' ) Print page
-		a.tools__recommend(href='recommend_en.html?index=#{pageId}&lang=#{recommend_lang}') Recommend page
-		a.tools__analyser(href='analyzer_en.html') Quick Analyser
-		a.tools__download(href='download_en.html') Download Center
-		a.tools__glossary(href='glossary_en.html') Glossary
+		a.tools__recommend(href= globalPath + 'en/recommend.html?index=#{pageId}&lang=#{recommend_lang}') Recommend page
+		a.tools__analyser(href= globalPath + 'en/analyzer.html') Quick Analyser
+		a.tools__download(href= globalPath + 'en/download.html') Download Center
+		a.tools__glossary(href= globalPath + 'en/glossary.html') Glossary
 		a.tools__compare(href='http://report2013.tmk-group.ru/reports/tmk/annual/2013/gb/English/0/home.html' target='_blank') Compare to 2013
