@@ -1,0 +1,31 @@
+extends ../layouts/default
+
+block head
+	- pageTitle = 'Мой годовой отчет';
+
+block recommend
+	- pageId = 'myreport';
+	- recommend_lang = lang;
+
+block content
+	p Здесь находится обзор выбранных Вами страниц. Вы можете загрузить эти страницы в виде файла PDF или распечатать соответствующую страницу PDF.
+	h3 Ваш личный отчет в настоящее время состоит из следующих страниц:
+
+	form(method='post' action='zip.php' target='_blank')
+		table.myreport__items(data-download-path='assets/pdf/pages/ru/')
+			tr.myreport__checkAll_container
+				td
+				td
+					label
+						span.link.link_js Выделить все элементы
+						input(type='checkbox' id='checkAll' checked)
+
+		.cb
+			span.myreport__delete.link_js Удалить все страницы
+			.myreport__download
+				i
+				input.link(type='submit' name='action' value='Скачать все страницы' data-download-full='Скачать все страницы' data-download-select='Скачать выбранные страницы')
+
+	.myreport__nopage
+		p Вы еще не выбрали страницы для загрузки.
+		p Для сохранения текущей страницы нажмите на ссылку "сохранить страницу".

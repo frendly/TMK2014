@@ -6,10 +6,13 @@ mixin tools(list)
 					= ' - ' + item[1]
 
 
-
 mixin folder(item)
 		li.menu__item
-			a.menu__link(href=item.link)= item.title
+
+			if lang === 'ru'
+				a.menu__link(href= globalPath + item.link)= item.title
+			else
+				a.menu__link(href= globalPath + 'en/' + item.link)= item.title
 
 			if item.submenu
 				+tree(item.submenu, 'submenu')

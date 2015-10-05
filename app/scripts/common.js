@@ -11,22 +11,23 @@ $(function () {
 	printPage();
 	formSubmit();
 
-	currentLinkToHistory();
+	addLinkToCookie('history');
+	myreport();
 
 	$('body').addClass('show');
 });
 
 function activeMenuItem(el) {
-	var pagePathArray = window.location.pathname.split('/'), // разбиваем url
-		href = pagePathArray[1], // достаем название страницы - 01.html
-		search = href.split('?')[1] || '';
+	var	url = window.location.href,
+		segment = (url.substr(url.lastIndexOf('/') + 1)),
+		search = segment.split('?')[1] || '';
 
 	if (search) {
 		search = '?' + search;
 	}
 
 	$(el)
-		.find('a[href~="' + href + '"]')
+		.find('a[href~="' + segment + '"]')
 		.addClass('menu__link_active') // отдельно указываем класс для построения breadcrumb
 			.filter(function () {
 				return this.search === search;
@@ -104,16 +105,15 @@ function lightbox() {
 		blockID;
 
 	if (box.is('a')) { /*если тег задан ссылке, то считам, что внутри изображение*/
-		if (box.find('.quote_3__image').width() > 350) {
-			box.append('<div class="lightbox__zoom">Увеличить</div>');
-			box.fancybox({
-				helpers: {
-					title: {
-						type: 'outside'
-					}
+		box.append('<div class="lightbox__zoom">Увеличить</div>');
+		box.fancybox({
+			fitToView: false,
+			helpers: {
+				title: {
+					type: 'outside',
 				}
-			});
-		}
+			}
+		});
 	} else {
 		/*так же может быть вариант table.lightbox: мы должны увеличить таблицу на весь экран*/
 		/*добавляем id к блоку, чтобы потом сослаться на него*/
@@ -180,60 +180,134 @@ function accordion() {
 }
 
 /* HISTORY FUNCTION */
-function currentLinkToHistory() {
+/*currentLinkToHistory*/
+function addLinkToCookie(cookieName) {
 	var title = document.title,
 		href = document.location.href,
 		data = {
 			title: title,
 			href: href
 		},
-		history = getHistoryCookie(),
+		/*history*/
+		cookie = getCookie(cookieName),
+		/*getHistoryCookie*/
 		found;
 
 	// проверяем на дубли
-	found = history.some(function (item) {
+	found = cookie.some(function (item) {
 		return item.title === data.title;
 	});
 
 	// добавляем новый элемент, если нет дублей
 	if (!found) {
 		// если элементов много, удаляем первый
-		if (history.length > 2) {
-			history.shift();
+		if (cookie.length > 2 && cookieName !== 'myreport') {
+			cookie.shift();
 		}
 
-		history.push(data);
-		history = JSON.stringify(history);
-		Cookies.set('history', history);
+		cookie.push(data);
+		cookie = JSON.stringify(cookie);
+		Cookies.set(cookieName, cookie);
 	}
 
-	createHistoryList();
+	if (cookieName === 'history') {
+		createListForHistory();
+	}
+	if (cookieName === 'myreport') {
+		createListForMyreport();
+	}
 }
 
-function getHistoryCookie() {
+/*getHistoryCookie*/
+function getCookie(cookieName) {
 	// парсим куку
-	var history = Cookies.get('history');
+	var cookie = Cookies.get(cookieName);
 
-	if (history !== undefined && history !== '') {
-		history = $.parseJSON(history); // если кука существует, преобразуем строку в объект
+	if (cookie !== undefined && cookie !== '') {
+		cookie = $.parseJSON(cookie); // если кука существует, преобразуем строку в объект
 	} else {
-		history = [];
+		cookie = [];
 	}
-	return history;
+	return cookie;
 }
 
-function createHistoryList() {
-	var history = getHistoryCookie(),
+function counterCookieItems(animation) {
+	var cookie = getCookie('myreport'),
+		counter = 0;
+
+	$.each(cookie, function (i) {
+		counter++;
+	});
+	$('.myreport__counter').attr('data-counter', counter);
+
+	if (animation === 'animate') {
+		animate($('.myreport__counter'), 'bounceIn');
+	}
+}
+
+function animate(element_ID, animation) {
+	$(element_ID).addClass(animation);
+	var wait = window.setTimeout(function () {
+		$(element_ID).removeClass(animation);
+	}, 1300
+	);
+}
+
+/*createHistoryList*/
+function createListForHistory(cookieName) {
+	var cookieName = 'history',
+		cookie = getCookie(cookieName),
+		container = '.' + cookieName + '__items',
 		output = '';
 
 	// формируем вывод ссылок из куки в DOM
-	$.each(history, function (i, item) {
+	$.each(cookie, function (i, item) {
 		output += '<a class="history__link" href=' + item.href + '>' + item.title + '</a>';
 	});
 
-	$('.history__items').empty().append(output);
+	$(container).empty().append(output);
+}
+function checkAll() {
+	$('#checkAll').change(function () {
+		$('input:checkbox').prop('checked', $(this).prop('checked'));
+	});
 }
 
+function createListForMyreport() {
+	var cookieName = 'myreport',
+		cookie = getCookie(cookieName),
+		container = '.myreport__items',
+		pathToFile = $('.myreport__items').attr('data-download-path'),
+		output = '',
+		regex = /\d+/,
+		pageID,
+		segment,
+		fullLink;
+
+	// формируем вывод ссылок из куки в DOM
+	if (cookie.length > 0) {
+		$.each(cookie, function (i, item) {
+			segment = (item.href.substr(item.href.lastIndexOf('/') + 1));
+			pageID = segment.match(regex)[0];
+			fullLink = pathToFile + pageID + '.pdf';
+
+
+			output += '<tr>';
+			output += '<td><a class="myreport__link" href=' + item.href + '>' + item.title + '</a></td>';
+			output += '<td><input type="checkbox" checked name="files[]" value=' + fullLink + '></td>';
+			output += '</tr>';
+		});
+	} else {
+		$(container).parent().hide();
+		$('.myreport__nopage').show();
+	}
+
+	$(container).append(output);
+}
+
+function removeCookie(cookieName) {
+	Cookies(cookieName, undefined);
+}
 /* END HISTORY FUNCTION BLOCK */
 
 
@@ -259,4 +333,25 @@ function formSubmit() {
 
 		return false;
 	});
+}
+
+function myreport() {
+	counterCookieItems();
+	checkAll();
+
+	$('.myreport__save').click(function () {
+		addLinkToCookie('myreport');
+		counterCookieItems('animate');
+
+		return false;
+	});
+
+	$('.myreport__delete').click(function () {
+		removeCookie('myreport');
+		$('.myreport__items').parent().hide();
+		$('.myreport__nopage').show();
+		counterCookieItems('animate');
+
+	});
+	$('.pagemyreport').on('load', createListForMyreport());
 }

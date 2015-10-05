@@ -1,0 +1,45 @@
+extends ../layouts/default
+
+block head
+	- pageTitle = 'Центр загрузки';
+
+block recommend
+	- pageId = 'download';
+	- recommend_lang = lang;
+
+block content
+	p Вы можете скачать несколько файлов, отметив флажок справа напротив нужного файла. Выбранные файлы будут скачены в формате ZIP.
+	form(method='post' action='zip.php' target='_blank')
+		table.downloadCenter
+			tr.bold
+				td Годовой отчет
+				td Формат
+				td
+			+downloadItem('Годовой отчет ТМК 2014', 'TMK_Annual_Report_2014ru.pdf')
+			tr.bold
+				td Отдельные главы годового отчета
+				td Формат
+				td
+			+downloadItem('Профиль компании', 'chapters/ru/01_chapter_ru_TMK2014.pdf')
+			+downloadItem('Обращение к акционерам', 'chapters/ru/02_chapter_ru_TMK2014.pdf')
+			+downloadItem('Ключевые события', 'chapters/ru/03_chapter_ru_TMK2014.pdf')
+			+downloadItem('О компании', 'chapters/ru/04_chapter_ru_TMK2014.pdf')
+			+downloadItem('Ценные бумаги', 'chapters/ru/05_chapter_ru_TMK2014.pdf')
+			+downloadItem('Корпоративное управление', 'chapters/ru/06_chapter_ru_TMK2014.pdf')
+			+downloadItem('Социальная ответственность', 'chapters/ru/07_chapter_ru_TMK2014.pdf')
+			+downloadItem('MD&A', 'chapters/ru/08_chapter_ru_TMK2014.pdf')
+			+downloadItem('Консолидированная финансовая отчетность', 'chapters/ru/09_chapter_ru_TMK2014.pdf')
+			tr.bold
+				td Excel файлы
+				td Формат
+				td
+			+downloadItem('Консолидированный отчет о прибылях и убытках', 'ru/consolidated_income_statement_ru_TMK2014.xlsx')
+			+downloadItem('Консолидированный отчет о совокупном доходе', 'ru/comprehensive_income_ru_TMK2014.xlsx')
+			+downloadItem('Консолидированный отчет о финансовом положении', 'ru/financial_position_ru_TMK2014.xlsx')
+			+downloadItem('Консолидированный отчет об изменениях капитала', 'ru/changes_in_equity_ru_TMK2014.xlsx')
+			+downloadItem('Консолидированный отчет о движении денежных средств', 'ru/cash_flows_ru_TMK2014.xlsx')
+
+		.downloadCenter__zip
+			br
+			i
+			input(type='submit' name='action' value='Скачать в формате ZIP')
