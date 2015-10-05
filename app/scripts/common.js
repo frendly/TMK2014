@@ -153,7 +153,6 @@ function prevNextLink() {
 	}
 
 	prevPageLink = menuLink.eq(prevPageIndex).prop('href');
-	console.log(prevPageLink);
 
 	$('.prev-next-navigation')
 		.find('.prev-next-navigation__prev').prop('href', prevPageLink)
@@ -255,8 +254,9 @@ function animate(element_ID, animation) {
 
 /*createHistoryList*/
 function createListForHistory(cookieName) {
-	var cookieName = 'history',
-		cookie = getCookie(cookieName),
+	cookieName = 'history';
+
+	var cookie = getCookie(cookieName),
 		container = '.' + cookieName + '__items',
 		output = '';
 
