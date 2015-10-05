@@ -1,7 +1,7 @@
 block recommend
 
 if lang === 'en'
-	- var switchLink = pageId + '.html'
+	- var switchLink = globalPath + pageId + '.html'
 	a.switch-language(href=switchLink) RU
 else
 	- var switchLink = pageId + '_en.html'
