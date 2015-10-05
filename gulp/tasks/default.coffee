@@ -9,11 +9,16 @@ gulp.task 'stylusDependences', ->
 		'stylus'
 	)
 
+gulp.task 'jade', ->
+	runSequence([
+		'jade-ru'
+		'jade-en'
+	])
+
 gulp.task 'default', ->
 	runSequence(
 		[
 			'stylusDependences'
-			'jade'
 			'scripts'
 			'jscs'
 			'jshint'
@@ -29,6 +34,22 @@ gulp.task 'build', ['del'], ->
 	gulp.start(
 		'stylusDependences'
 		'jade'
+		'scripts'
+		'copy'
+	)
+
+gulp.task 'build-ru', ['del'], ->
+	gulp.start(
+		'stylusDependences'
+		'jade-ru'
+		'scripts'
+		'copy'
+	)
+
+gulp.task 'build-en', ['del'], ->
+	gulp.start(
+		'stylusDependences'
+		'jade-en'
 		'scripts'
 		'copy'
 	)
