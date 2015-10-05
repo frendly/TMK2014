@@ -18,16 +18,16 @@ $(function () {
 });
 
 function activeMenuItem(el) {
-	var pagePathArray = window.location.pathname.split('/'), // разбиваем url
-		href = pagePathArray[1], // достаем название страницы - 01.html
-		search = href.split('?')[1] || '';
+	var	url = window.location.href,
+		segment = (url.substr(url.lastIndexOf('/') + 1)),
+		search = segment.split('?')[1] || '';
 
 	if (search) {
 		search = '?' + search;
 	}
 
 	$(el)
-		.find('a[href~="' + href + '"]')
+		.find('a[href~="' + segment + '"]')
 		.addClass('menu__link_active') // отдельно указываем класс для построения breadcrumb
 			.filter(function () {
 				return this.search === search;
