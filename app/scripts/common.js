@@ -137,10 +137,13 @@ function prevNextLink() {
 		prevPageIndex,
 		prevPageLink;
 
-
 	// next link
 	if (activeLinkIndex + 1 < menuLink.length) {
 		nextPageIndex = activeLinkIndex + 1;
+
+		if (activeLink.attr('href') === menuLink.eq(nextPageIndex).attr('href')) {
+			nextPageIndex = activeLinkIndex + 2; // пропускаем дублирующуюся ссылку родительского элемента
+		}
 	}
 	nextPageLink = menuLink.eq(nextPageIndex).prop('href');
 
