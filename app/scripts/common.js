@@ -1,7 +1,7 @@
 /*'use strict';*/
 
 $(function () {
-	activeMenuItem('.menu, #top-wrapper');
+	activeMenuItem('.menu, #top-wrapper, .tools');
 	submenu();
 	breadcrumb();
 	queryToInput();
