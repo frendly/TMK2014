@@ -1,2 +1,8 @@
-.breadcrumb
-	.breadcrumb__item: a(href="/") Home
+if lang === 'ru'
+	.breadcrumb
+		.breadcrumb__items
+			a.breadcrumb__link(href= globalPath) Главная
+else
+	.breadcrumb
+		.breadcrumb__items
+			a.breadcrumb__link(href= globalPath + 'en/') Home

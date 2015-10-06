@@ -1,7 +1,7 @@
 /*'use strict';*/
 
 $(function () {
-	activeMenuItem('.menu, #top-wrapper');
+	activeMenuItem('.menu, #top-wrapper, .tools');
 	submenu();
 	breadcrumb();
 	queryToInput();
@@ -62,14 +62,14 @@ function submenu() {
 function breadcrumb() {
 // breadcrumb
 	var $this = $('.menu__link_active'),
-		$bc = $('<div class="breadcrumb__items"></div>');
+		$bc = $('.breadcrumb__items');
 
 	$this.parents('li').each(function (n, li) {
 		var $a = $(li).children('a').clone().removeClass().addClass('breadcrumb__link');
-		$bc.prepend($a);
+		$bc.append($a);
 	});
 
-	$('.breadcrumb').html($bc.prepend('<a class="breadcrumb__link" href="/">Главная</a>'));
+	$('.breadcrumb').prepend($bc);
 }
 
 function getQueryParams(qs) {
