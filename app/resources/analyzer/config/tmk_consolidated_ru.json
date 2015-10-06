@@ -1,0 +1,11 @@
+{
+	"styleFile"      : "tmk_consolidated_ru.json",
+	"chartThemeFile" : "tmkChartTheme.json",
+	"languageFile"   : ["russian.json", "tmk.json"],
+	"dataFile"       : "tmk_consolidated_ru.xls.json",
+
+	"showFootnotesInTableUpperSpans" : true,
+	"enableGlobalFootnoteList" : true,
+	"tooManyComparisionKeys" : false,
+	"numberOfComparableValues" : 10
+}

@@ -1,0 +1,46 @@
+{
+"text": {		
+	"barChartButtonTitle"             : "Chart",
+	"lineChartButtonTitle"            : "Line",
+	"tableButtonTitle"                : "Table",
+
+	"toggleHideInactiveRowsCheckbox_off"  : "Show inactive figures",
+	"toggleHideInactiveRowsCheckbox_on"   : "Hide inactive figures",
+	"toggleShowAllYearsCheckbox"      : "All years",
+	
+	"lineChartDialogHeading"            : "Line chart",
+	"barChartDialogHeading"             : "Bar chart",
+	"dialogBoxOkayText"                 : "Confirm",
+	"dialogBoxCancelText"               : "x",
+	"moreThanTwoComparisionKeysWarning" : "You have selected many values for your comparison. For a clear presentation, we recommend to use the relative view or to disable some items!",
+	"tooManyComparisionKeysForItemGroupedChartWarning" : "To show the chart grouped by items it must be all the selected items in the same unit.",
+	"tooManyActiveKeys"		    : "You have selected too many values for your comparison. Please disable some items!",
+	"lineChartAbsoluteRadioText"        : "absolute values",
+	"lineChartRelativeRadioText"        : "relative values",
+ 	"barChartAbsoluteRadioText"         : "absolute values,<br/>order by:",
+ 	"barChartRelativeRadioText"         : "relative values,<br/>order by:",
+	"barChartYearGroupedRadioText"      : "Years",
+	"barChartItemGroupedRadioText"      : "Items",
+	
+	"label_Print"					    : "Print",
+	"label_PNGExport"					: "Export as PNG",
+	"label_JPGExport"					: "Export as JPG",
+	"label_SVGExport"					: "Export as SVG",
+	"label_PDFExport"					: "Export as PDF",
+	"label_XLSExport"					: "Export as Excel",
+	"label_IMGExport"					: "Export as image",
+	"label_PDFFull"						: "Export as PDF",
+	
+	"dropDownButton"					: "Open Category",
+	"dropUpButton"						: "Collapse Category",
+	"removeRowButton"                   : "Hide Row",
+	"addRowButton"                   	: "Show Row",
+	"removeCategoryRowButton"           : "Hide Category",
+	"addCategoryRowButton"             	: "Show Category",
+	"canNotGenerateChartWarning"        : "No calculation possible with selected figures.",
+	"absoluteValues"		: "Absolute values",
+	"relativeValues"		: "Relative values",
+	"sortByYear"			: "Order by years",
+	"sortByItem"			: "Order by items"
+	}
+}
