@@ -387,7 +387,8 @@
 				 "padding" : "10px",
 				 "margin-top" : "3px"},
 	  "css3"  : {"borderRadius":"10px"},
-	  "pdf"   : "/downloads/tmk/tmk_consolidated_en.pdf",
+	  "pdf"   : "download/tmk_consolidated_en.pdf",
+	  "xls"   : "download/tmk_keyfigures_en.xls",
 	  "excel" : "true"
 	},
 

@@ -319,12 +319,16 @@ function GuiBuilder(myDivId, myConfigHandler, myDataHandler) {
 	  var btn = this.buildExportButton(this.configHandler.getConfig().buttons.exportXLSButton, this.configHandler.getConfig().text.label_XLSExport);
 	  btn.addClass('exportXLSButton');
 	  btn.click(function() {
-		  exportXLS(
+	  	var cfg = qas4[divId].guiBuilder.configHandler.getConfig();
+		  if (cfg.exportOptions.xls) {
+			window.open(cfg.exportOptions.xls);
+		  }
+		  /*exportXLS(
 			  qas4[divId].dataHandler.getActiveRows(),
 			  qas4[divId].dataHandler.getActiveCols(),
 			  qas4[divId].configHandler.getConfig().dataFile,
 			  qas4[divId].configHandler.getConfig().styleFile
-		  );
+		  );*/
 	  });
 	  container.append(btn);
 	  btn.mouseenter(function() {alpha($(this), 50);} );
