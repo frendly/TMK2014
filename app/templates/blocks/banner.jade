@@ -1,2 +1,6 @@
-.banner
-	img.banner__image(src='assets/images/tmk_banner.jpg' alt='Годовой отчет 2014')
+if lang === 'ru'
+	.banner
+		img.banner__image(src= globalPath + 'assets/images/tmk_banner.jpg' alt='Годовой отчет 2014')
+else
+	.banner
+		img.banner__image(src= globalPath + 'assets/images/tmk_banner.jpg' alt='Annual report 2014')

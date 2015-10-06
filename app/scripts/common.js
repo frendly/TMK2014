@@ -18,16 +18,16 @@ $(function () {
 });
 
 function activeMenuItem(el) {
-	var pagePathArray = window.location.pathname.split('/'), // разбиваем url
-		href = pagePathArray[1], // достаем название страницы - 01.html
-		search = href.split('?')[1] || '';
+	var	url = window.location.href,
+		segment = (url.substr(url.lastIndexOf('/') + 1)),
+		search = segment.split('?')[1] || '';
 
 	if (search) {
 		search = '?' + search;
 	}
 
 	$(el)
-		.find('a[href~="' + href + '"]')
+		.find('a[href~="' + segment + '"]')
 		.addClass('menu__link_active') // отдельно указываем класс для построения breadcrumb
 			.filter(function () {
 				return this.search === search;
@@ -137,10 +137,13 @@ function prevNextLink() {
 		prevPageIndex,
 		prevPageLink;
 
-
 	// next link
 	if (activeLinkIndex + 1 < menuLink.length) {
 		nextPageIndex = activeLinkIndex + 1;
+
+		if (activeLink.attr('href') === menuLink.eq(nextPageIndex).attr('href')) {
+			nextPageIndex = activeLinkIndex + 2; // пропускаем дублирующуюся ссылку родительского элемента
+		}
 	}
 	nextPageLink = menuLink.eq(nextPageIndex).prop('href');
 
@@ -153,7 +156,6 @@ function prevNextLink() {
 	}
 
 	prevPageLink = menuLink.eq(prevPageIndex).prop('href');
-	console.log(prevPageLink);
 
 	$('.prev-next-navigation')
 		.find('.prev-next-navigation__prev').prop('href', prevPageLink)
@@ -255,8 +257,9 @@ function animate(element_ID, animation) {
 
 /*createHistoryList*/
 function createListForHistory(cookieName) {
-	var cookieName = 'history',
-		cookie = getCookie(cookieName),
+	cookieName = 'history';
+
+	var cookie = getCookie(cookieName),
 		container = '.' + cookieName + '__items',
 		output = '';
 

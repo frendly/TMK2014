@@ -16,11 +16,11 @@ block recommend
 							#search_submit
 		else
 			ul
-				li: a.home(href='index_en.html') Home
-				li: a.sitemap(href='sitemap_en.html') Sitemap
+				li: a.home(href= globalPath + 'en/') Home
+				li: a.sitemap(href= globalPath + 'en/sitemap.html') Sitemap
 				if pageId !== undefinded
-					li: a.recommend(href='recommend_en.html?index=#{pageId}&lang=#{recommend_lang}') Recommend page
-				li: a(href='contact_en.html') Contacts
+					li: a.recommend(href= globalPath + 'en/recommend.html?index=#{pageId}&lang=#{recommend_lang}') Recommend page
+				li: a(href= globalPath + 'en/contact.html') Contacts
 				li: include ../blocks/switch-language
 				li: .search
 					form.searchform(method="post")

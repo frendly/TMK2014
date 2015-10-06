@@ -5,7 +5,6 @@ gutil       = require 'gulp-util'
 gulp.task 'stylusDependences', ->
 	runSequence(
 		'spritesmith'
-		'svg'
 		'stylus'
 	)
 

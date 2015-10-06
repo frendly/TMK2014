@@ -1,8 +1,18 @@
-footer.footer
-	.content
-		.footer__copyright © TMK, 2015
-		.footer_address 105062, г. Москва, ул. Покровка, д. 40, стр. 2а.&nbsp;
-		.footer_phone Телефон: +7(495)775-7600&nbsp;
-		.footer_phone Факс: +7(495)775-7601
-		.footer_email
-			a(href='mailto:tmk@tmk-group.com') tmk@tmk-group.com
+if lang === 'ru'
+	footer.footer
+		.content
+			.footer__copyright © TMK, 2015
+			.footer_address 105062, г. Москва, ул. Покровка, д. 40, стр. 2а.&nbsp;
+			.footer_phone Телефон: +7(495)775-7600&nbsp;
+			.footer_phone Факс: +7(495)775-7601
+			.footer_email
+				a(href='mailto:tmk@tmk-group.com') tmk@tmk-group.com
+else
+	footer.footer
+		.content
+			.footer__copyright © 2015 TMK All rights reserved
+			.footer_address 40/2a, Pokrovka Street, Moscow, 105062, Russia&nbsp;
+			.footer_phone Phone: +7(495)775-7600&nbsp;
+			.footer_phone Fax: +7(495)775-7601
+			.footer_email
+				a(href='mailto:tmk@tmk-group.com') tmk@tmk-group.com
