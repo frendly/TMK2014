@@ -18,18 +18,23 @@
         "submenu": [
             {
                 "title": "Ключевые показатели",
+                "title_en": "Key indicators",
                 "link": "0401.html"
             }, {
                 "title": "Развитие бизнеса",
+                "title_en": "Business development",
                 "link": "0402.html"
             }, {
                 "title": "Структура и география активов",
+                "title_en": "Asset structure and geography",
                 "link": "0403.html"
             }, {
                 "title": "Стратегия",
+                "title_en": "Strategy",
                 "link": "0404.html"
             }, {
                 "title": "Стратегическая инвестиционная программа",
+                "title_en": "Strategic investment programme",
                 "link": "0405.html"
             }, {
                 "title": "ТМК на мировом трубном рынке",

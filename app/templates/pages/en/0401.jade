@@ -1,0 +1,17 @@
+extends ../../layouts/english
+
+block head
+	- pageTitle = 'Key indicators';
+
+block recommend
+	- pageId = '0401';
+	- recommend_lang = lang;
+
+block content
+	+quote_3("GRAPH 4.1", "Sales", "• 2012-2014", "/ thousand tonnes /", "04/41/411.png")
+	+quote_3("GRAPH 4.2", "Revenue", "• 2012-2014", "/USD m /", "04/41/412.png")
+	+quote_3("GRAPH 4.3", "EBITDA, and EBITDA margin", "• 2012-2014", "/ USD m, % /", "04/41/413.png")
+	+quote_3("GRAPH 4.4", "Net income*", "• 2012-2014", "/ USD m /", "04/41/414.png")
+
+	.cb
+	p.mtb50 * Net income was negatively affected by FX loss of USD 301 m as compared to USD 49 m in 2013, and impairment loss of USD 153 m.
