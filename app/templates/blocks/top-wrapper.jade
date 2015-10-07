@@ -17,10 +17,10 @@ block recommend
 		else
 			ul
 				li: a.home(href= globalPath + 'en/') Home
-				li: a.sitemap(href= globalPath + 'en/sitemap.html') Sitemap
+				li: a.sitemap(href='sitemap.html') Sitemap
 				if pageId !== undefinded
-					li: a.recommend(href= globalPath + 'en/recommend.html?index=#{pageId}&lang=#{recommend_lang}') Recommend page
-				li: a(href= globalPath + 'en/contact.html') Contacts
+					li: a.recommend(href='recommend.html?index=#{pageId}&lang=#{recommend_lang}') Recommend page
+				li: a(href='contact.html') Contacts
 				li: include ../blocks/switch-language
 				li: .search
 					form.searchform(method="post")

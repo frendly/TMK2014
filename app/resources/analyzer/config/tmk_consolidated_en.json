@@ -1,0 +1,11 @@
+{
+	"styleFile"      : "tmk_consolidated_en.json",
+	"chartThemeFile" : "tmkChartTheme.json",
+	"languageFile"   : ["english.json", "tmk_en.json"],
+	"dataFile"       : "tmk_consolidated_en.xls.json",
+
+	"showFootnotesInTableUpperSpans" : true,
+	"enableGlobalFootnoteList" : true,
+	"tooManyComparisionKeys" : false,
+	"numberOfComparableValues" : 10
+}

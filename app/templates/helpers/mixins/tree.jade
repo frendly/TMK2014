@@ -9,10 +9,7 @@ mixin tools(list)
 mixin folder(item)
 		li.menu__item
 
-			if lang === 'ru'
-				a.menu__link(href= item.link)= item.title
-			else
-				a.menu__link(href= 'en/' + item.link)= item.title
+			a.menu__link(href= item.link)= item.title
 
 			if item.submenu
 				+tree(item.submenu, 'submenu')

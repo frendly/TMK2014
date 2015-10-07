@@ -1,0 +1,41 @@
+{
+"text": {		
+	"barChartButtonTitle"             : "График",
+	"lineChartButtonTitle"            : "Линия",
+	"tableButtonTitle"                : "Таблица",
+
+	"toggleHideInactiveRowsCheckbox_off"  : "Показывать неактивные данные",
+	"toggleHideInactiveRowsCheckbox_on"   : "Скрывать неиспользуемые данные",
+	"toggleShowAllYearsCheckbox"      : "Весь период",
+	
+	"lineChartDialogHeading"            : "Линия",
+	"barChartDialogHeading"             : "Бары",
+	"dialogBoxOkayText"                 : "Подтвердить",
+	"dialogBoxCancelText"               : "Назад",
+	"moreThanTwoComparisionKeysWarning" : "Вы выбрали много значений для сравнения. Для четкого представления, рекомендуется использовать относительное сравнение или отключить некоторые значения!",
+	"tooManyComparisionKeysForItemGroupedChartWarning" : "Чтобы показать диаграмму сгруппированую по пунктам, неоходимо выбрать элементы в тех же единицах измерения.",
+	"tooManyActiveKeys"		    : "Вы выбрали слишком много информации для сравнения. Пожалуйста, отключите некоторые значения!",
+	"lineChartAbsoluteRadioText"        : "Абсолютные значения",
+	"lineChartRelativeRadioText"        : "Относительные значения",
+ 	"barChartAbsoluteRadioText"         : "Абсолютные значения,<br/>Сортировать по:",
+ 	"barChartRelativeRadioText"         : "Относительные значения,<br/>Сортировать по:",
+	"barChartYearGroupedRadioText"      : "Годам",
+	"barChartItemGroupedRadioText"      : "Значениям",
+	
+	"label_Print"					    : "Печать",
+	"label_PNGExport"					: "Экспорт в PNG",
+	"label_JPGExport"					: "Экспорт в JPG",
+	"label_SVGExport"					: "Экспорт в SVG",
+	"label_PDFExport"					: "Экспорт в PDF",
+	"label_XLSExport"					: "Экспорт в XLS",
+	"label_IMGExport"					: "Экспорт картинка",
+	"label_PDFFull"						: "Скачать все значения",
+	
+	"dropDownButton"					: "Открыть категории",
+	"dropUpButton"						: "Закрыть категории",
+	"removeRowButton"                   : "Скрыть строку",
+	"addRowButton"                   	: "Показать строку",
+	"removeCategoryRowButton"           : "Скрыть категории",
+	"addCategoryRowButton"             	: "Показать категории"
+	}
+}

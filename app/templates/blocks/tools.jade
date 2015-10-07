@@ -2,19 +2,19 @@ if lang === 'ru'
 	.tools
 		h4.tools__title Инструментарий
 
-		a.tools__print(href='#' ) Распечатать страницу
-		a.tools__recommend(href= globalPath + 'recommend.html?index=#{pageId}&lang=#{recommend_lang}') Рекомендовать отчет
-		a.tools__analyser(href= globalPath + 'analyzer.html') Интерактивный анализ
-		a.tools__download(href= globalPath + 'download.html') Центр загрузки
-		a.tools__glossary(href= globalPath + 'glossary.html') Список принятых сокращений
-		a.tools__compare(href='http://report2013.tmk-group.ru/reports/tmk/annual/2013/gb/Russian/0.html' target='_blank') Сравнить с 2013
+		li: a.tools__print(href='#' ) Распечатать страницу
+		li: a.tools__recommend(href='recommend.html?index=#{pageId}&lang=#{recommend_lang}') Рекомендовать отчет
+		li: a.tools__analyser(href='analyzer.html') Интерактивный анализ
+		li: a.tools__download(href='download.html') Центр загрузки
+		li: a.tools__glossary(href='glossary.html') Список принятых сокращений
+		li: a.tools__compare(href='http://report2013.tmk-group.ru/reports/tmk/annual/2013/gb/Russian/0.html' target='_blank') Сравнить с 2013
 else
 	.tools
 		h4.tools__title Tools
 
-		a.tools__print(href='#' ) Print page
-		a.tools__recommend(href= globalPath + 'en/recommend.html?index=#{pageId}&lang=#{recommend_lang}') Recommend page
-		a.tools__analyser(href= globalPath + 'en/analyzer.html') Quick Analyser
-		a.tools__download(href= globalPath + 'en/download.html') Download Center
-		a.tools__glossary(href= globalPath + 'en/glossary.html') Glossary
-		a.tools__compare(href='http://report2013.tmk-group.ru/reports/tmk/annual/2013/gb/English/0/home.html' target='_blank') Compare to 2013
+		li: a.tools__print(href='#' ) Print page
+		li: a.tools__recommend(href='recommend.html?index=#{pageId}&lang=#{recommend_lang}') Recommend page
+		li: a.tools__analyser(href='analyzer.html') Quick Analyser
+		li: a.tools__download(href='download.html') Download Center
+		li: a.tools__glossary(href='glossary.html') Glossary
+		li: a.tools__compare(href='http://report2013.tmk-group.ru/reports/tmk/annual/2013/gb/English/0/home.html' target='_blank') Compare to 2013

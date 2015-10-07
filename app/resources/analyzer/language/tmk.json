@@ -1,0 +1,7 @@
+{
+"text": {		
+	"dialogBoxCancelText"               : "x",
+	"toggleHideInactiveRowsCheckbox_off"  : "Показать дополнительные данные",
+	"toggleHideInactiveRowsCheckbox_on"   : "Скрыть дополнительные данные"
+	}
+}

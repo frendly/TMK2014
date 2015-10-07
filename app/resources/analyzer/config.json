@@ -1,0 +1,9 @@
+{
+	"configPath"    : "config/",
+	"stylePath"     : "styles/",
+	"chartThemePath": "styles/charts/",
+	"languagePath"  : "language/",
+	"imgPath"       : "img/",
+	"buttonImgPath" : "img/buttons/",
+	"dataPath"      : "data/"
+}

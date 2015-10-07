@@ -1,19 +1,26 @@
 .tools
 	position relative
 
-	& > a
-		position relative
-		display block
-		padding-left 24px
-		margin-bottom 7px
-		background-repeat no-repeat
-		color $default_block_text
+	li
+		list-style none
 
-		&:before
-			content ''
-			display inline-block
-			position absolute
-			left 0
+		a
+			position relative
+			display block
+			padding-left 24px
+			margin-bottom 7px
+			background-repeat no-repeat
+			color $default_block_text
+
+			&:before
+				content ''
+				display inline-block
+				position absolute
+				left 0
+
+	.menu__link_active
+		background-color transparent
+		color inherit
 
 .tools__title
 	h4()
