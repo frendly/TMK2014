@@ -1,0 +1,4 @@
+mixin img(src, alt)
+	- var src = imagePath + src;
+	- var alt = alt || pageTitle
+	img(class=attributes.class src=src alt=alt)
