@@ -1,15 +1,19 @@
 [
     {
         "title": "Профиль компании",
+        "title_en": "Profile",
         "link": "01.html"
     }, {
         "title": "Обращение к акционерам",
+        "title_en": "Address to shareholders",
         "link": "02.html"
     }, {
         "title": "Ключевые события",
+        "title_en": "Key events",
         "link": "03.html"
     }, {
         "title": "О компании",
+        "title_en": "Company overview",
         "link": "0401.html",
         "submenu": [
             {
@@ -52,9 +56,11 @@
         ]
     }, {
         "title": "Ценные бумаги",
+        "title_en": "Company's securities",
         "link": "05.html"
     }, {
         "title": "Корпоративное управление",
+        "title_en": "Corporate governance report",
         "link": "0601.html",
         "submenu": [
             {
@@ -91,6 +97,7 @@
         ]
     }, {
         "title": "Социальная ответственность",
+        "title_en": "Corporate citizenship",
         "link": "0701.html",
         "submenu": [
             {
@@ -109,6 +116,7 @@
         ]
     }, {
         "title": "MD&A",
+        "title_en": "MD&A",
         "link": "08.html",
         "submenu": [
             {
@@ -136,6 +144,7 @@
         ]
     }, {
         "title": "Консолидированная финансовая отчетность",
+        "title_en": "Consolidated financial statements",
         "link": "0901.html",
         "submenu": [
             {
