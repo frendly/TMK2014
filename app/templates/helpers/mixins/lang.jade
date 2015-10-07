@@ -1,5 +1,5 @@
 mixin lang(ru_text, en_text)
 	if lang === 'ru'
-		| #{ru_text}
+		| !{ru_text}
 	if lang === 'en' && en_text
-		| #{en_text}
+		| !{en_text}
