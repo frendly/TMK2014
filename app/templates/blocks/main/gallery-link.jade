@@ -1,7 +1,18 @@
-.gallery-link
-	a.gallery-link__item(href='03.html')
-		img.gallery-link__image(src=globalPath + 'assets/images/main/cover1.jpg' alt='Ключевые события')
-		span.gallery-link__text Ключевые события
-	a.gallery-link__item(href='0901.html')
-		img.gallery-link__image(src=globalPath + 'assets/images/main/cover2.jpg' alt='Финансовая отчетность')
-		span.gallery-link__text Финансовая отчетность
+if lang === 'ru'
+	.gallery-link
+		a.gallery-link__item(href='03.html')
+			+img('main/cover1.jpg', 'Ключевые события').gallery-link__image
+			span.gallery-link__text Ключевые события
+
+		a.gallery-link__item(href='0901.html')
+			+img('main/cover2.jpg', 'Финансовая отчетность').gallery-link__image
+			span.gallery-link__text Финансовая отчетность
+else
+	.gallery-link
+		a.gallery-link__item(href='03.html')
+			+img('main/cover1.jpg', 'Key Events').gallery-link__image
+			span.gallery-link__text Key Events
+
+		a.gallery-link__item(href='0901.html')
+			+img('main/cover2.jpg', 'Financial Statements').gallery-link__image
+			span.gallery-link__text Financial Statements
