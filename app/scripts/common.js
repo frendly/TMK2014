@@ -102,10 +102,14 @@ function queryToInput() {
 function lightbox() {
 	var box = $('.lightbox'),
 		link,
-		blockID;
+		blockID,
+		lang = $('html').attr('lang'),
+		zoom_text = (lang === 'ru') ? 'Увеличить' : 'Zoom';
+
+		console.log(lang, zoom_text);
 
 	if (box.is('a')) { /*если тег задан ссылке, то считам, что внутри изображение*/
-		box.append('<div class="lightbox__zoom">Увеличить</div>');
+		box.append('<div class="lightbox__zoom">' + zoom_text + '</div>');
 		box.fancybox({
 			fitToView: false,
 			helpers: {
@@ -119,7 +123,7 @@ function lightbox() {
 		/*добавляем id к блоку, чтобы потом сослаться на него*/
 		box.each(function (i) {
 			blockID = 'lightbox_' + i;
-			link = $('<a />').prop('href', '#' + blockID).addClass('lightbox__zoom').append('Увеличить');
+			link = $('<a />').prop('href', '#' + blockID).addClass('lightbox__zoom').append(zoom_text);
 			$(this).attr('id', blockID).after(link);
 		});
 
