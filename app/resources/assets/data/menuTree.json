@@ -77,12 +77,15 @@
         "submenu": [
             {
                 "title": "Заявление Совета директоров ОАО «ТМК» о соблюдении принципов корпоративного управления",
+                "title_en": "OAO TMK board of directors’ statement  of compliance with the corporate governance principles set out in the corporate governance code recommended by the bank of russia to issuers of securities accepted for trading on the official market",
                 "link": "0601.html"
             }, {
                 "title": "Структура корпоративного управления ОАО «ТМК»",
+                "title_en": "OAO TMK’S corporate governance structure",
                 "link": "0602.html"
             }, {
                 "title": "Права акционеров и равенство условий при их осуществлении",
+                "title_en": "Rights and equitable treatment of shareholders",
                 "link": "0603.html"
             }, {
                 "title": "Совет директоров",

@@ -1,0 +1,141 @@
+extends ../../layouts/english
+
+block head
+	- pageTitle = 'Company\'s securities';
+
+block recommend
+	- pageId = '05';
+	- recommend_lang = lang;
+
+block content
+	h3 Share capital and dividends
+
+	p.excerpt As of 1 January 2014,  the share capital of OAO TMK was comprised of 937,586,094 fully paid-up ordinary shares, each with a nominal value of RUB 10.
+
+	+img('05/05.jpg').inner_cover
+
+	p In June 2014, OAO TMK Board of Directors made a decision to increase the authorised capital through a public offering of 56,000,000 additional shares at a price of RUB 101.25 per share.
+	p In December 2014, the Company issued 54,321,166 shares. The bulk of TMK’s additional shares was acquired by RUSNANO, which became the holder of 5.476 % of OAO TMK’s shares. The other shareholders owning 5 % of votes or more remained the same in 2014.
+	p As at 31 December 2014, the number of fully paid-up ordinary shares issued by OAO TMK was 991,907,260.
+	p In accordance with the changes to the authorised capital of OAO TMK in Q1 2015, now it totals nine billion nine hundred and nineteen million seventy two thousand six hundred roubles (RUB 9,919,072,600) and is divided into nine hundred and ninety-one million nine hundred and seven thousand two hundred and sixty (991,907,260) ordinary registered shares with a nominal value of ten roubles (RUB 10) each (outstanding shares).
+	p OAO TMK does not have any preferred shares, either outstanding or authorised.
+
+
+	h4 NUMBER OF SHARES AS AT 31 DECEMBER 2014:
+
+	table.table_05_1
+		tr
+			th(colspan='2') Number of shares
+			th %
+		tr
+			td TMK Steel Ltd, incl. affiliates*
+			td 672 030 999
+			td 67,75 %
+		tr
+			td TMK subsidiaries
+			td 53 577
+			td 0,005 %
+		tr
+			td TMK Bonds S. A. **
+			td 71 505 956
+			td 7,21 %
+		tr
+			td Rockarrow Investments Limited
+			td 1 014 095
+			td 0,102 %
+		tr
+			td Free float
+			td 247 302 633
+			td 24,93 %
+		tr.bold.orange_border_b
+			td TOTAL:
+			td 991 907 260
+			td 100,00 %
+	//- http://codepen.io/lkp/pen/xGedXR?editors=110
+	+quote_2("*  The main beneficiary  is Dmitry Pumpyanskiy.", "**  TMK Bonds S. A.  holds 17,876,489 global depositary receipts (GDR) of TMK, representing 71,505,956 OAO TMK shares, or 7.21 % of the authorised capital, to secure commitments to convert the bonds issued by TMK Bonds S. A. in February 2010, totalling USD 412.5 m and maturing in 2015, into TMK GDRs. These bonds were fully redeemed on 11 February 2015.")
+
+	p As at 31 December 2014, 24.93 % of OAO TMK shares were free float, with approximately 70 % of them traded as GDRs on the London Stock Exchange. OAO TMK Board of Directors and Management held a total of 457,690 shares, or 0.046 % of the authorised capital.
+	p OAO TMK securities are listed on the Russian and international stock exchanges.
+	p Shares are listed on the Moscow Exchange under the TRMK ticker (Bloomberg: TRMK:RM / Reuters: TRMK.MM).
+	p GDRs are listed on the London Stock Exchange under the TMKS ticker (Bloomberg: TMKS:LI / Reuters: TRMKq.L).
+
+
+	table.table_05_2
+		tr
+			th(colspan=2) REG.S
+			th  144A
+		tr
+			td CUSIP:
+			td 87260R201
+			td 87260R102
+		tr
+			td SEDOL:
+			td B1FY0V4
+			td B1G3K21
+		tr
+			td ISIN:
+			td US87260R2013
+			td US87260R1023
+
+	p American depository receipts (ADR) are traded on the OTC platform (OTCQX) under the TMKXY ticker (Bloomberg: TMKXY:US / Reuters: TMKXY.PK).
+
+	table.table_05_3.border_t
+		tr
+			td CUSIP:
+			td 87260R300
+		tr
+			td SEDOL:
+			td B4VF6B4
+		tr
+			td ISIN:
+			td US87260R3003
+	//- http://codepen.io/lkp/pen/BNERJq?editors=110
+
+	h4 DIVIDEND HISTORY:
+
+	table.table_05_4
+		tr
+			th PERIOD
+			th DIVIDENDS DECLARED PER SHARE*, RUB
+			th TOTAL DECLARED DIVIDENDS, RUB
+			th DIVIDENDS PAID** VERSUS  TOTAL DIVIDENDS DECLARED, %
+		tr
+			td 2008
+			td  1,75
+			td  1 527 751 750,00
+			td  99,99 %
+		tr
+			td 2009
+			td -
+			td -
+			td
+		tr
+			td 2010
+			td 0,85
+			td 796 948 180,00
+			td 99,98 %
+		tr
+			td 2011
+			td  3,63
+			td  3 403 437 521,22
+			td  99,98 %
+		tr
+			td 2012
+			td  2,34
+			td  2 193 951 459,96
+			td  99,98 %
+		tr
+			td 2013
+			td  1,82
+			td  1  706 406 691,08
+			td 99,98 %
+		tr.orange_border_b
+			td 1H 2014
+			td  0,397
+			td  393 786 159,48
+			td  99,98 %
+	//- http://codepen.io/lkp/pen/RPOVyM?editors=110
+
+	p As at 31 December 2014, TMK market capitalisation totalled USD 533 m.
+
+	+quote_2("*   The specified amount of dividends  declared per share is the amount of interim and annual dividends declared per share, excluding the interim dividends for 2008 and 1H 2014", "**  dividends were not fully paid  because of the failure of certain shareholders to provide accurate banking details or failure to reach shareholders at the addresses attached to their accounts")
