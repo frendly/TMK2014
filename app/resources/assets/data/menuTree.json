@@ -46,18 +46,23 @@
                 "link": "0407.html"
             }, {
                 "title": "Рынок Северной Америки",
+                "title_en": "North american market",
                 "link": "0408.html"
             }, {
                 "title": "Европейский рынок",
+                "title_en": "European market",
                 "link": "0409.html"
             }, {
                 "title": "Ближневосточный рынок",
+                "title_en": "The middle east market",
                 "link": "0410.html"
             }, {
                 "title": "Премиальные соединения и нефтесервисное обслуживание",
+                "title_en": "Premium connections and oilfield services",
                 "link": "0411.html"
             }, {
                 "title": "Исследования и разработки, научно-техническое сотрудничество",
+                "title_en": "R&D initiatives and cooperation",
                 "link": "0412.html"
             }
         ]
