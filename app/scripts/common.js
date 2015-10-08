@@ -106,8 +106,6 @@ function lightbox() {
 		lang = $('html').attr('lang'),
 		zoom_text = (lang === 'ru') ? 'Увеличить' : 'Zoom';
 
-		console.log(lang, zoom_text);
-
 	if (box.is('a')) { /*если тег задан ссылке, то считам, что внутри изображение*/
 		box.append('<div class="lightbox__zoom">' + zoom_text + '</div>');
 		box.fancybox({
