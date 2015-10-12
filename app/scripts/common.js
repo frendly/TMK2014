@@ -60,16 +60,13 @@ function submenu() {
 }
 
 function breadcrumb() {
-// breadcrumb
-	var $this = $('.menu__link_active'),
+	var $links = $('.menu__item_active > .menu__link'),
 		$bc = $('.breadcrumb__items');
 
-	$this.parents('li').each(function (n, li) {
-		var $a = $(li).children('a').clone().removeClass().addClass('breadcrumb__link');
+	$links.each(function () {
+		var $a = $(this).clone().removeClass().addClass('breadcrumb__link');
 		$bc.append($a);
 	});
-
-	$('.breadcrumb').prepend($bc);
 }
 
 function getQueryParams(qs) {
