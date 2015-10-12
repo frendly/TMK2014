@@ -12,37 +12,64 @@
 
 .menu__item
 	text-align left
-	/*border 1px solid #000*/
 
 .menu__item:nth-child(1)
-	width 21.333%
 	order 6
 .menu__item:nth-child(2)
-	width 25.15%
 	order 7
 .menu__item:nth-child(3)
-	width 28%
 	order 3
 .menu__item:nth-child(4)
-	padding-right 10px
 	order 5
-
-	.menu__item_active
-		padding-right 8px
 .menu__item:nth-child(5)
-	width 21.333%
 	order 1
 .menu__item:nth-child(6)
 	order 2
 .menu__item:nth-child(7)
-	width 27.95%
 	order 8
 .menu__item:nth-child(8)
-	width 9.8%
 	order 4
 .menu__item:nth-child(9)
-	width 22.8%
 	order 9
+
+html[lang='ru']
+	position relative
+
+	.menu__item:nth-child(1)
+		width 21.333%
+	.menu__item:nth-child(2)
+		width 25.15%
+	.menu__item:nth-child(3)
+		width 28%
+	.menu__item:nth-child(4)
+		padding-right 10px
+		.menu__item_active
+			padding-right 8px
+	.menu__item:nth-child(5)
+		width 21.333%
+	.menu__item:nth-child(7)
+		width 27.95%
+	.menu__item:nth-child(8)
+		width 9.8%
+	.menu__item:nth-child(9)
+		width 22.8%
+
+html[lang='en']
+	position relative
+
+	.menu
+		width 650px
+
+	.menu__item:nth-child(1)
+		width 22.6%
+	.menu__item:nth-child(2)
+		width 30%
+	.menu__item:nth-child(3)
+		width 14%
+	.menu__item:nth-child(4)
+		width 23%
+	.menu__item:nth-child(9)
+		width 23%
 
 .menu__item_active > .menu__link,
 .menu__link_active
