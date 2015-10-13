@@ -1,75 +1,53 @@
 .menu__wrap
 	text-align right
 .menu
-	width 780px
+	width 830px
+	height 70px
+	position relative
+	margin-bottom 25px
 	font-size 14px
-	padding-bottom 25px
-	display inline-flex
-	flex-wrap wrap
-	flex-flow row wrap
-	align-content flex-end
-	justify-content flex-end
+	display inline-block
 
 .menu__item
 	text-align left
+	position absolute
 
 .menu__item:nth-child(1)
-	order 6
+	left 0
+	bottom 0
 .menu__item:nth-child(2)
-	order 7
+	left 179px
+	bottom 0
 .menu__item:nth-child(3)
-	order 3
+	top 0
+	left 407px
 .menu__item:nth-child(4)
-	order 5
+	top 0
+	right 0
 .menu__item:nth-child(5)
-	order 1
+	top 0
+	left 0
 .menu__item:nth-child(6)
-	order 2
+	top 0
+	left 180px
 .menu__item:nth-child(7)
-	order 8
+	right 221px
+	bottom 0
 .menu__item:nth-child(8)
-	order 4
+	top 0
+	right 114px
 .menu__item:nth-child(9)
-	order 9
-
-html[lang='ru']
-	position relative
-
-	.menu__item:nth-child(1)
-		width 21.333%
-	.menu__item:nth-child(2)
-		width 25.15%
-	.menu__item:nth-child(3)
-		width 28%
-	.menu__item:nth-child(4)
-		padding-right 10px
-		.menu__item_active
-			padding-right 8px
-	.menu__item:nth-child(5)
-		width 21.333%
-	.menu__item:nth-child(7)
-		width 27.95%
-	.menu__item:nth-child(8)
-		width 9.8%
-	.menu__item:nth-child(9)
-		width 22.8%
+	right 0
+	bottom 0
 
 html[lang='en']
-	position relative
-
 	.menu
-		width 650px
+		width 773px
 
-	.menu__item:nth-child(1)
-		width 22.6%
-	.menu__item:nth-child(2)
-		width 30%
-	.menu__item:nth-child(3)
-		width 14%
-	.menu__item:nth-child(4)
-		width 23%
-	.menu__item:nth-child(9)
-		width 23%
+	.menu__item:nth-child(8)
+		top 0
+		right 222px
+
 
 .menu__item_active > .menu__link,
 .menu__link_active
