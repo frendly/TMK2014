@@ -13,29 +13,29 @@
 	position absolute
 
 .menu__item:nth-child(1)
+	top 0
 	left 0
-	bottom 0
 .menu__item:nth-child(2)
+	top 0
 	left 179px
-	bottom 0
 .menu__item:nth-child(3)
 	top 0
 	left 407px
 .menu__item:nth-child(4)
 	top 0
-	right 0
+	right 75px
 .menu__item:nth-child(5)
-	top 0
 	left 0
+	bottom 0
 .menu__item:nth-child(6)
-	top 0
 	left 180px
+	bottom 0
 .menu__item:nth-child(7)
 	right 221px
 	bottom 0
 .menu__item:nth-child(8)
 	top 0
-	right 114px
+	right 0
 .menu__item:nth-child(9)
 	right 0
 	bottom 0
@@ -44,9 +44,12 @@ html[lang='en']
 	.menu
 		width 773px
 
+	.menu__item:nth-child(4)
+		right 72px
 	.menu__item:nth-child(8)
-		top 0
-		right 222px
+		top inherit
+		right 150px
+		bottom 0
 
 
 .menu__item_active > .menu__link,
