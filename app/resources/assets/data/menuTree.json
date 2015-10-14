@@ -46,7 +46,7 @@
                 "link": "0407.html"
             }, {
                 "title": "Рынок Северной Америки",
-                "title_en": "North american market",
+                "title_en": "North American market",
                 "link": "0408.html"
             }, {
                 "title": "Европейский рынок",
@@ -54,7 +54,7 @@
                 "link": "0409.html"
             }, {
                 "title": "Ближневосточный рынок",
-                "title_en": "The middle east market",
+                "title_en": "The Middle East market",
                 "link": "0410.html"
             }, {
                 "title": "Премиальные соединения и нефтесервисное обслуживание",
@@ -124,15 +124,19 @@
         "submenu": [
             {
                 "title": "Управление персоналом и социальная политика",
+                "title_en": "Human resources and social policy",
                 "link": "0701.html"
             }, {
                 "title": "Охрана труда",
+                "title_en": "Occupational safety",
                 "link": "0702.html"
             }, {
                 "title": "Управление воздействием на окружающую среду",
+                "title_en": "Environmental management",
                 "link": "0703.html"
             }, {
                 "title": "Благотворительная и спонсорская деятельность",
+                "title_en": "Sponsorship and charity",
                 "link": "0704.html"
             }
         ]
