@@ -1,17 +1,24 @@
 .message_main
-    width 470px
-    height 275px
-    float left
-    background-image url('../images/main/message_image.jpg')
-    background-position 94% 100%
-    background-repeat no-repeat
+	width 470px
+	height 275px
+	float left
+	background-image url('../images/main/message_image.jpg')
+	background-position 94% 100%
+	background-repeat no-repeat
 
 .message_main__text
-    font-size 14px
-    line-height 20px
-    color #000
+	font-size 14px
+	line-height 20px
+	color #000
 
 .message_main__link
-    main_link()
-    margin-top 70px
-    display inline-block
+	main_link()
+	margin-top 70px
+	display inline-block
+
+html[lang='en']
+	.message_main__text
+		padding-right 150px
+		height 187px
+	.message_main__link
+		margin-top 0
