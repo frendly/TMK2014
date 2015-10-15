@@ -12,10 +12,9 @@ errorHandler = require '../utils/errorHandler'
 paths        = require '../paths'
 getData      = require '../utils/getData'
 
-gulp.task 'jade-ru', ->
+gulp.task 'jade', ->
 	gulp.src [
 			'**/*.jade'
-			'!en/**/*'
 		],
 			cwd: 'app/templates/pages/'
 		.pipe plumber errorHandler: errorHandler
@@ -36,31 +35,7 @@ gulp.task 'jade-ru', ->
 			indent_char: '\t'
 			indent_inner_html: true
 			preserve_newlines: true
-		.pipe rename dirname: '.'
+		.pipe rename (path) ->
+			path.dirname = path.dirname.replace(/^pages/, '.')
+			return path
 		.pipe gulp.dest paths.dist
-
-gulp.task 'jade-en', ->
-	gulp.src [
-			'en/**/*.jade'
-		],
-			cwd: 'app/templates/pages/'
-		.pipe plumber errorHandler: errorHandler
-		.pipe cached 'jade'
-		.pipe gulpif global.watch, inheritance basedir: 'app/templates'
-		.pipe filter (file) -> /templates[\\\/]pages[\\\/]en/.test file.path
-		.pipe jade
-			data:
-				getData: getData
-				page:
-					copyright: pkg.copyright
-					description: pkg.description
-					keywords: pkg.keywords.join ', '
-					title: pkg.title
-		.pipe prettify
-			brace_style: 'expand'
-			indent_size: 1
-			indent_char: '\t'
-			indent_inner_html: true
-			preserve_newlines: true
-		.pipe rename dirname: '.'
-		.pipe gulp.dest paths.dist + '/en'
