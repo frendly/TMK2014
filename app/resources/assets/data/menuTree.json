@@ -147,24 +147,31 @@
         "submenu": [
             {
                 "title": "Обзор деятельности компании",
+                "title_en": "Executive overview",
                 "link": "0801.html"
             }, {
                 "title": "Структура группы ТМК",
+                "title_en": "Business structure",
                 "link": "0802.html"
             }, {
                 "title": "2014 год в сравнении с 2013 годом",
+                "title_en": "Year ended 31 december 2014 results",
                 "link": "0803.html"
             }, {
                 "title": "Капитальные вложения",
+                "title_en": "Capital expenditure",
                 "link": "0804.html"
             }, {
                 "title": "Тенденции развития",
+                "title_en": "Development trends",
                 "link": "0805.html"
             }, {
                 "title": "Финансовые показатели",
+                "title_en": "Selected financial data",
                 "link": "0806.html"
             }, {
                 "title": "Основные риски",
+                "title_en": "Principal risks and uncertainties",
                 "link": "0807.html"
             }
         ]

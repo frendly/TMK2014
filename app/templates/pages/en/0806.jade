@@ -1,0 +1,170 @@
+extends ../../layouts/english
+
+block head
+	- pageTitle = 'Selected financial data';
+
+block recommend
+	- pageId = '0806';
+	- recommend_lang = lang;
+
+block content
+	h3 ADJUSTED EBITDA
+	p.orange Reconciliation of income before tax to Adjusted EBITDA for the twelve months ended:
+
+	table.table_0806_1
+		tr
+			th
+			th 31 December 2014
+			th 30 September 2014
+			th 30 June 2014
+			th 31 March 2014
+			th 31 December 2013
+		tr
+			td(colspan=5)
+			td in million dollars
+		tr
+			td Income before tax
+			td (201)
+			td 150
+			td 201
+			td 186
+			td 312
+		tr
+			td Depreciation and amortisation
+			td 304
+			td 317
+			td 319
+			td 319
+			td 326
+		tr
+			td Finance costs, net
+			td 226
+			td 231
+			td 225
+			td 230
+			td 245
+		tr
+			td Impairment of assets/(Reversal of impairment of assets)
+			td 153
+			td 3
+			td 5
+			td 5
+			td 5
+		tr
+			td Loss/(gain) on changes in fair value of derivative financial instrument
+			td(2)
+			td (7)
+			td (5)
+			td (5)
+			td (8)
+		tr
+			td Foreign exchange (gain)/loss, net
+			td 301
+			td 113
+			td 36
+			td 107
+			td 49
+		tr
+			td Loss/(gain) on disposal of property, plant and equipment
+			td 4
+			td 1
+			td 3
+			td 4
+			td 6
+		tr
+			td Movement in allowances and provisions (except for provisions for bonuses)
+			td 20
+			td 17
+			td 18
+			td 18
+			td 19
+		tr
+			td Other non-cash items
+			td 0
+			td 0
+			td 0
+			td 0
+			td (2)
+		tr.bold
+			td ADJUSTED EBITDA
+			td 804
+			td 824
+			td 804
+			td 864
+			td 952
+
+	p Adjusted EBITDA is not a measure of our operating performance under IFRS and should not be considered as an alternative to gross profit, net profit or any other performance measures derived in accordance with IFRS or as an alternative to cash flow from operating activities or as a measure of our liquidity. In particular,
+	p Adjusted EBITDA should not be considered to be a measure of discretionary cash available to invest in our growth. Adjusted EBITDA has limitations as an analytical tool, and potential investors should not consider it in isolation, or as a substitute for analysis of our operating results as reported under IFRS.
+	p The following limitations of Adjusted EBITDA as an analytical tool should be considered:
+
+	ul
+		li Adjusted EBITDA does not reflect the impact of financing or finance costs on our operating performance, which can be significant and could further increase if we were to incur more debt;
+		li Adjusted EBITDA does not reflect the impact of income taxes on our operating performance;
+		li Adjusted EBITDA does not reflect the impact of depreciation and amortisation on our operating performance. The assets that are being depreciated and/or amortised will have to be replaced in the future and such depreciation and amortisation expense may approximate the cost to replace these assets in the future. By excluding this expense from Adjusted EBITDA, it does not reflect our future cash requirements for these replacements; and
+		li Adjusted EBITDA does not reflect the impact of other non-cash items on our operating performance, such as foreign exchange (gain)/loss, impairment/(reversal of impairment) of non-current assets, movements in allowances and provisions, (gain)/loss on disposal of property, plant and equipment, (gain)/loss on changes in fair value of financial instruments, share of (profit)/ loss of associate and other non-cash items. Other companies in the pipe industry may calculate Adjusted EBITDA differently or may use it for other purposes, limiting its usefulness as comparative measure. We compensate for these limitations by relying primarily on our IFRS operating results and using Adjusted EBITDA only supplementally.
+
+	h3 NET DEBT
+	h4 NET DEBT HAS BEEN CALCULATED AS OF THE DATES INDICATED:
+
+	table.table_0806_2
+		tr
+			th
+			th 31 December 2014
+			th 30 September 2014
+			th 30  June  2014
+			th 31  March  2014
+			th 31 December 2013
+		tr
+			td(colspan=5)
+			td in million dollars
+		tr
+			td Loans and borrowings
+			td 3 170
+			td 3 491
+			td 3 696
+			td 3 535
+			td 3 642
+		tr
+			td Liability under finance lease
+			td 53
+			td 55
+			td 58
+			td 59
+			td 52
+		tr.bold
+			td TOTAL DEBT
+			td 3 223
+			td 3 546
+			td 3 753
+			td 3 594
+			td 3 694
+		tr
+			td(colspan=6) Net of:
+		tr
+			td Cash and short-term financial investments
+			td (253)
+			td (37)
+			td (122)
+			td (68)
+			td (93)
+		tr.bold
+			td NET DEBT
+			td 2 969
+			td 3 508
+			td 3 631
+			td 3 526
+			td 3 600
+		tr
+			td(colspan=6)
+		tr.bold
+			td NET DEBT TO EBITDA (LTM*)
+			td 3,69
+			td 4,26
+			td 4,52
+			td 4,08
+			td 3,78
+
+	+quote_2("*  Net Debt-to-EBITDA ratio is defined as the quotient of Net Debt at the end of the given reporting date divided by the Adjusted EBITDA for the 12 months immediately preceding the given reporting date. Adjusted EBITDA — see «Selected financial data».", "")
+	p Net Debt is not a measure under IFRS, and it should not be considered to be an alternative to other measures of financial position. Other companies in the pipe industry may calculate Net Debt differently and therefore comparability may be limited. Net Debt is a measure of our operating performance that is not required by, or presented in accordance with, IFRS. Although Net Debt is a non IFRS measure, it is widely used to assess liquidity and the adequacy of a company’s financial structure. Management believes Net Debt provides an accurate indicator of our ability to meet our financial obligations, represented by gross debt, from available cash. Net Debt demonstrates investors the trend in our net financial position over the periods presented. However, the use of Net Debt assumes that gross debt can be reduced by cash. In fact, it is unlikely that all available cash will be used to reduce gross debt all at once, as cash must also be available
+	p to pay employees, suppliers and taxes, and to meet other operating needs and capital expenditure requirements. Net Debt and the ratio of net debt to equity, or leverage, are used to evaluate our financial structure in terms of sufficiency and cost of capital, level of debt, debt rating and funding cost.
+	p These measures also make it possible to evaluate if our financial structure is adequate to achieve our business and financial targets. Management monitors the net debt and the leverage ratio or similar measures as reported by other companies in Russia or abroad in order to assess our liquidity and financial structure relative to such companies. Management also monitors the trends in our Net Debt and leverage in order to optimise the use of internally generated funds versus borrowed funds.
