@@ -182,21 +182,27 @@
         "submenu": [
             {
                 "title": "Заключение независимых аудиторов",
+                "title_en": "Independent auditors’ report",
                 "link": "0901.html"
             }, {
                 "title": "Консолидированный отчет о прибылях и убытках",
+                "title_en": "Consolidated Income Statement",
                 "link": "0902.html"
             }, {
                 "title": "Консолидированный отчет о совокупном доходе",
+                "title_en": "Consolidated Statement of Comprehensive Income",
                 "link": "0903.html"
             }, {
                 "title": "Консолидированный отчет о финансовом положении",
+                "title_en": "Consolidated Statement of Financial Position",
                 "link": "0904.html"
             }, {
                 "title": "Консолидированный отчет об изменениях капитала",
+                "title_en": "Consolidated Statement of Changes in Equity",
                 "link": "0905.html"
             }, {
                 "title": "Консолидированный отчет о движении денежных средств",
+                "title_en": "Consolidated Statement of Cash Flows",
                 "link": "0906.html"
             }, {
                 "title": "Примечания к консолидированной финансовой отчетности",
