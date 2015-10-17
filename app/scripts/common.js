@@ -15,9 +15,11 @@ $(function () {
 	myreport();
 
 	$('body').addClass('show');
+	reloadPage('.menu__link, .sub-menu__link, .prev-next-navigation__next, .prev-next-navigation__prev, #quickfinderSelect option');
 });
 
 function activeMenuItem(el) {
+	// парсим url и выбираем крайнюю его часть вида 01.html
 	var	url = window.location.href,
 		segment = (url.substr(url.lastIndexOf('/') + 1)),
 		search = segment.split('?')[1] || '';
@@ -26,7 +28,14 @@ function activeMenuItem(el) {
 		search = '?' + search;
 	}
 
+	// находим идентичную ссылку в структуре меню
 	$(el)
+	// если класс существует, удаляем его
+		.find('.menu__item_active').removeClass('menu__item_active')
+		.end()
+		.find('.menu__link_active').removeClass('menu__link_active')
+		.end()
+	// находим текущую ссылку
 		.find('a[href~="' + segment + '"]')
 		.addClass('menu__link_active') // отдельно указываем класс для построения breadcrumb
 			.filter(function () {
@@ -62,6 +71,8 @@ function submenu() {
 function breadcrumb() {
 	var $links = $('.menu__item_active > .menu__link'),
 		$bc = $('.breadcrumb__items');
+		// если в селекторе уже есть ссылки, удаляем все, кроме ссылки на главную страницу
+		$bc = $bc.children().not(':first').remove().end().end();
 
 	$links.each(function () {
 		var $a = $(this).clone().removeClass().addClass('breadcrumb__link');
@@ -356,4 +367,32 @@ function myreport() {
 
 	});
 	$('.pagemyreport').on('load', createListForMyreport());
+}
+
+function reloadPage(usingUrl) {
+	$(document).on('click', usingUrl, function () {
+		var link = $(this).attr('href');
+
+		$.get(link, function(data) {
+			var parser = new DOMParser(),
+				body = parser.parseFromString(data, "text/html");
+				pageID = body.body.getAttribute('class'),
+				content = $(data).find('#content');
+
+			$('body')
+				.removeClass()
+				.addClass(pageID)
+				.addClass('show')
+				.end()
+				.find('#content').html(content);
+		});
+		history.pushState({param: 'Value'}, '', link);
+
+		activeMenuItem('.menu, #top-wrapper, .tools');
+		submenu();
+		breadcrumb();
+		prevNextLink();
+
+		return false;
+	});
 }
