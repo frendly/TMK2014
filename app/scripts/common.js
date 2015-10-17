@@ -15,7 +15,7 @@ $(function () {
 	myreport();
 
 	$('body').addClass('show');
-	reloadPage('.menu__link, .sub-menu__link, .prev-next-navigation__next, .prev-next-navigation__prev, #quickfinderSelect option');
+	reloadPage('.menu__link, .sub-menu__link, .prev-next-navigation__next, .prev-next-navigation__prev');
 });
 
 function activeMenuItem(el) {
@@ -370,12 +370,13 @@ function myreport() {
 }
 
 function reloadPage(usingUrl) {
+	/*не работает hastory.back*/
 	$(document).on('click', usingUrl, function () {
 		var link = $(this).attr('href');
 
-		$.get(link, function(data) {
+		$.get(link, function (data) {
 			var parser = new DOMParser(),
-				body = parser.parseFromString(data, "text/html");
+				body = parser.parseFromString(data, 'text/html');
 				pageID = body.body.getAttribute('class'),
 				content = $(data).find('#content');
 
