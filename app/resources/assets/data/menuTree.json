@@ -226,55 +226,72 @@
                         "link": "090704.html"
                     }, {
                         "title": "Основные положения учетной политики",
+                        "title_en": "Significant Accounting Policies",
                         "link": "09070501.html",
                         "submenu": [
                             {
                                 "title": "Принципы консолидации",
+                                "title_en": "Basis of Consolidation",
                                 "link": "09070501.html"
                             }, {
                                 "title": "Объединения бизнеса и гудвил",
+                                "title_en": "Business Combination and Goodwill",
                                 "link": "09070502.html"
                             }, {
                                 "title": "Денежные средства и их эквиваленты",
+                                "title_en": "Cash and Cash Equivalents ",
                                 "link": "09070503.html"
                             }, {
                                 "title": "Финансовые активы",
+                                "title_en": "Financial Assets",
                                 "link": "09070504.html"
                             }, {
                                 "title": "Запасы",
+                                "title_en": "Inventories",
                                 "link": "09070505.html"
                             }, {
                                 "title": "Основные средства",
+                                "title_en": "Property, Plant and Equipment",
                                 "link": "09070506.html"
                             }, {
                                 "title": "Нематериальные активы (за исключением гудвила)",
+                                "title_en": "Intangible Assets (Other than Goodwill)",
                                 "link": "09070507.html"
                             }, {
                                 "title": "Обесценение нефинансовых активов (за исключением гудвила)",
+                                "title_en": "Impairment of Non-Financial Assets (Other than Goodwill)",
                                 "link": "09070508.html"
                             }, {
                                 "title": "Кредиты и займы",
+                                "title_en": "Borrowings",
                                 "link": "09070509.html"
                             }, {
                                 "title": "Договоры аренды",
+                                "title_en": "Leases",
                                 "link": "09070510.html"
                             }, {
                                 "title": "Резервы",
+                                "title_en": "Provisions",
                                 "link": "09070511.html"
                             }, {
                                 "title": "Обязательства по выплатам вознаграждения работникам",
+                                "title_en": "Employee Benefits Liability",
                                 "link": "09070512.html"
                             }, {
                                 "title": "Государственные субсидии",
+                                "title_en": "Government Grants",
                                 "link": "09070513.html"
                             }, {
                                 "title": "Отложенный налог на прибыль",
+                                "title_en": "Deferred Income Tax",
                                 "link": "09070514.html"
                             }, {
                                 "title": "Капитал",
+                                "title_en": "Equity",
                                 "link": "09070515.html"
                             }, {
                                 "title": "Признание выручки",
+                                "title_en": "Revenue Recognition",
                                 "link": "09070516.html"
                             }
                         ]
