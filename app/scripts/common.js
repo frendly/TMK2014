@@ -15,7 +15,39 @@ $(function () {
 	myreport();
 
 	$('body').addClass('show');
-	reloadPage('.menu__link, .sub-menu__link, .prev-next-navigation__next, .prev-next-navigation__prev');
+
+	/*pajax*/
+	$(document).pjax('a:not(.lightbox )', '.main', {
+		fragment: '.main'
+	});
+
+	$(document).on('pjax:complete', function (xhr) {
+		var pageID = $('#content').attr('data-page'),
+			pageLang = $('#content').attr('data-page-lang'),
+			switchLang,
+			switchLink;
+
+		if (pageLang === 'ru') {
+			switchLang = 'en'
+			switchLink = pageID ? '/' + switchLang + '/' + pageID + '.html' : '/';
+		} else {
+			switchLang = 'ru'
+			switchLink = pageID ? '/' + pageID + '.html' : '/en/';
+		}
+		$('.switch-language').attr('href', switchLink);
+		$('html').attr('lang', pageLang);
+
+		activeMenuItem('.menu, #top-wrapper, .tools');
+		submenu();
+		breadcrumb();
+		prevNextLink();
+		lightbox();
+		accordion();
+		printPage();
+		addLinkToCookie('history');
+		myreport();
+	});
+
 });
 
 function activeMenuItem(el) {
@@ -178,7 +210,7 @@ function prevNextLink() {
 function accordion() {
 	var acc_heading = $('.acc_heading');
 
-	acc_heading.click(function () {
+	acc_heading.on('click', function () {
 		if ($(this).hasClass('acc_open')) {
 			$(this).removeClass('acc_open').addClass('acc_closed').next().hide();
 			return false;
@@ -367,33 +399,4 @@ function myreport() {
 
 	});
 	$('.pagemyreport').on('load', createListForMyreport());
-}
-
-function reloadPage(usingUrl) {
-	/*не работает hastory.back*/
-	$(document).on('click', usingUrl, function () {
-		var link = $(this).attr('href');
-
-		$.get(link, function (data) {
-			var parser = new DOMParser(),
-				body = parser.parseFromString(data, 'text/html');
-				pageID = body.body.getAttribute('class'),
-				content = $(data).find('#content');
-
-			$('body')
-				.removeClass()
-				.addClass(pageID)
-				.addClass('show')
-				.end()
-				.find('#content').html(content);
-		});
-		history.pushState({param: 'Value'}, '', link);
-
-		activeMenuItem('.menu, #top-wrapper, .tools');
-		submenu();
-		breadcrumb();
-		prevNextLink();
-
-		return false;
-	});
 }
