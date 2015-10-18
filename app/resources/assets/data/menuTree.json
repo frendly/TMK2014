@@ -205,20 +205,24 @@
                 "title_en": "Consolidated Statement of Cash Flows",
                 "link": "0906.html"
             }, {
-                "title": "Примечания к консолидированной финансовой отчетности",
+                "title": "Notes to the Consolidated Financial Statements",
                 "link": "090701.html",
                 "submenu": [
                     {
                         "title": "Информация о Компании",
+                        "title_en": "Corporate Information",
                         "link": "090701.html"
                     }, {
                         "title": "Основа подготовки финансовой отчетности",
+                        "title_en": "Basis of Preparation of the Financial Statements",
                         "link": "090702.html"
                     }, {
                         "title": "Существенные оценочные значения и допущения",
+                        "title_en": "Significant Estimates and Assumptions",
                         "link": "090703.html"
                     }, {
                         "title": "Изменения в учетной политике",
+                        "title_en": "Changes in Accounting Policies",
                         "link": "090704.html"
                     }, {
                         "title": "Основные положения учетной политики",
