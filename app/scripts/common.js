@@ -17,21 +17,23 @@ $(function () {
 	$('body').addClass('show');
 
 	/*pajax*/
+	// применять ко всем ссылкам, кроме .lightbox
 	$(document).pjax('a:not(.lightbox )', '.main', {
 		fragment: '.main'
 	});
 
 	$(document).on('pjax:complete', function (xhr) {
+		// если запрос успешно выполнен
 		var pageID = $('#content').attr('data-page'),
 			pageLang = $('#content').attr('data-page-lang'),
 			switchLang,
 			switchLink;
 
 		if (pageLang === 'ru') {
-			switchLang = 'en'
+			switchLang = 'en';
 			switchLink = pageID ? '/' + switchLang + '/' + pageID + '.html' : '/';
 		} else {
-			switchLang = 'ru'
+			switchLang = 'ru';
 			switchLink = pageID ? '/' + pageID + '.html' : '/en/';
 		}
 		$('.switch-language').attr('href', switchLink);
