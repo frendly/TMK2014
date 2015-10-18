@@ -171,4 +171,5 @@ gulp imagemin
 * [`jquery`](https://github.com/jquery/jquery)
 * [`jQuery.print`](https://doersguild.github.io/jQuery.print/)
 * [`jquery-sticky`](https://github.com/garand/sticky)
+* [`jquery-pjax`](https://github.com/defunkt/jquery-pjax)
 * [`svg4everybody`](https://github.com/jonathantneal/svg4everybody)
