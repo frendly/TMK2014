@@ -297,37 +297,48 @@
                         ]
                     }, {
                         "title": "Примечания к консолидированной финансовой отчетности",
+                        "title_en": "Notes to the Consolidated Financial Statements",
                         "link": "09070601.html",
                         "submenu": [
                             {
                                 "title": "Информация по сегментам",
+                                "title_en": "Segment Information",
                                  "link": "09070601.html"
                             }, {
                                 "title": "Себестоимость реализации",
+                                "title_en": "Cost of Sales",
                                  "link": "09070602.html"
                             }, {
                                 "title": "Коммерческие расходы",
+                                "title_en": "Selling and Distribution Expenses",
                                  "link": "09070603.html"
                             }, {
                                 "title": "Расходы на рекламу и продвижение продукции",
+                                "title_en": "Advertising and Promotion Expenses",
                                  "link": "09070604.html"
                             }, {
                                 "title": "Общехозяйственные и административные расходы",
+                                "title_en": "General and Administrative Expenses",
                                  "link": "09070605.html"
                             }, {
                                 "title": "Расходы на исследования и разработки",
+                                "title_en": "Research and Development Expenses",
                                  "link": "09070606.html"
                             }, {
                                 "title": "Прочие операционные расходы",
+                                "title_en": "Other Operating Expenses",
                                  "link": "09070607.html"
                             }, {
                                 "title": "Прочие операционные доходы",
+                                "title_en": "Other Operating Income",
                                  "link": "09070608.html"
                             }, {
                                 "title": "Налог на прибыль",
+                                "title_en": "Income Tax",
                                  "link": "09070610.html"
                             }, {
                                 "title": "Прибыль на акцию",
+                                "title_en": "Earnings per Share",
                                  "link": "09070611.html"
                             }, {
                                 "title": "Приобретение дочерних предприятий",
