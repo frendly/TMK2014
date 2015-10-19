@@ -418,12 +418,15 @@
                                  "link": "09070630.html"
                             }, {
                                 "title": "Капитал",
+                                "title_en": "Equity",
                                  "link": "09070631.html"
                             }, {
                                 "title": "Задачи и принципы управления финансовыми рисками",
+                                "title_en": "Financial Risk Management Objectives and Policies",
                                 "link": "09070632.html"
                             }, {
                                 "title": "События после отчетной даты",
+                                "title_en": "Subsequent events",
                                 "link": "09070633.html"
                             }
                         ]
