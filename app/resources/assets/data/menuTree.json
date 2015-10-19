@@ -378,18 +378,23 @@
                                  "link": "09070620.html"
                             }, {
                                 "title": "Торговая и прочая кредиторская задолженность",
+                                "title_en": "Trade and Other Payables",
                                  "link": "09070621.html"
                             }, {
                                 "title": "Резервы и начисленные обязательства",
+                                "title_en": "Provisions and Accruals",
                                  "link": "09070622.html"
                             }, {
                                 "title": "Процентные кредиты и займы",
+                                "title_en": "Interest-Bearing Loans and Borrowings",
                                  "link": "09070623.html"
                             }, {
                                 "title": "Конвертируемые облигации",
+                                "title_en": "Convertible Bonds",
                                  "link": "09070624.html"
                             }, {
                                 "title": "Обязательства по финансовой аренде",
+                                "title_en": "Finance Lease Liability",
                                  "link": "09070625.html"
                             }, {
                                 "title": "Обязательства по выплатам вознаграждения работникам",
