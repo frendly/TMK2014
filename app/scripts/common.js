@@ -185,9 +185,11 @@ function accordion() {
 function addLinkToCookie(cookieName) {
 	var title = document.title,
 		href = document.location.href,
+		lang = $('html').attr('lang'),
 		data = {
 			title: title,
-			href: href
+			href: href,
+			lang: lang
 		},
 		/*history*/
 		cookie = getCookie(cookieName),
@@ -260,11 +262,14 @@ function createListForHistory(cookieName) {
 
 	var cookie = getCookie(cookieName),
 		container = '.' + cookieName + '__items',
-		output = '';
+		output = '',
+		lang = $('html').attr('lang');
 
 	// формируем вывод ссылок из куки в DOM
 	$.each(cookie, function (i, item) {
-		output += '<a class="history__link" href=' + item.href + '>' + item.title + '</a>';
+		if (lang === item.lang) {
+			output += '<a class="history__link" href=' + item.href + '>' + item.title + '</a>';
+		}
 	});
 
 	$(container).empty().append(output);
