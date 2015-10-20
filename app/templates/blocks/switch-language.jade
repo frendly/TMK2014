@@ -1,8 +1,14 @@
 block recommend
 
 if lang === 'en'
-	- var switchLink = globalPath + pageId + '.html'
+	if pageId === 'main'
+		- var switchLink = globalPath
+	else
+		- var switchLink = globalPath + pageId + '.html'
 	a.switch-language(href=switchLink) RU
 else
-	- var switchLink = globalPath + 'en/' + pageId + '.html'
+	if pageId === 'main'
+		- var switchLink = globalPath + 'en/'
+	else
+		- var switchLink = globalPath + 'en/' + pageId + '.html'
 	a.switch-language(href=switchLink) EN
