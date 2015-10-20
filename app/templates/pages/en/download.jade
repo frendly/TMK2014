@@ -1,0 +1,45 @@
+extends ../../layouts/english
+
+block head
+	- pageTitle = 'Download Center';
+
+block recommend
+	- pageId = 'download';
+	- recommend_lang = lang;
+
+block content
+	p To download several files in one step just mark these in the check box on the right side. After clicking "Download" you will receive a zip file with your selected content.
+	form(method='post' action= globalPath + 'zip.php' target='_blank')
+		table.downloadCenter
+			tr.bold
+				td Complete Report
+				td Format
+				td
+			+downloadItem('TMK Annual Report 2014', 'TMK_Annual_Report_2014en.pdf')
+			tr.bold
+				td Single chapters from the Financial Report
+				td Format
+				td
+			+downloadItem('Profile', 'chapters/en/01_chapter_en_TMK2014.pdf')
+			+downloadItem('Address to shareholders', 'chapters/en/02_chapter_en_TMK2014.pdf')
+			+downloadItem('Key events', 'chapters/en/03_chapter_en_TMK2014.pdf')
+			+downloadItem('Company overview', 'chapters/en/04_chapter_en_TMK2014.pdf')
+			+downloadItem('Company\'s securities', 'chapters/en/05_chapter_en_TMK2014.pdf')
+			+downloadItem('Corporate governance report', 'chapters/en/06_chapter_en_TMK2014.pdf')
+			+downloadItem('Corporate citizenship', 'chapters/en/07_chapter_en_TMK2014.pdf')
+			+downloadItem('MD&A', 'chapters/en/08_chapter_en_TMK2014.pdf')
+			+downloadItem('Financial statements', 'chapters/en/09_chapter_en_TMK2014.pdf')
+			tr.bold
+				td Excel-Downloads
+				td Format
+				td
+			+downloadItem('Consolidated Income Statement', 'en/consolidated_income_statement_en_TMK2014.xlsx')
+			+downloadItem('Consolidated Statement of Comprehensive Income', 'en/comprehensive_income_en_TMK2014.xlsx')
+			+downloadItem('Consolidated Statement of Financial Position', 'en/financial_position_en_TMK2014.xlsx')
+			+downloadItem('Consolidated Statement of Changes in Equity', 'en/changes_in_equity_en_TMK2014.xlsx')
+			+downloadItem('Consolidated Statement of Cash Flows', 'en/cash_flows_en_TMK2014.xlsx')
+
+		.downloadCenter__zip
+			br
+			i
+			input(type='submit' name='action' value='Download Zip file')
