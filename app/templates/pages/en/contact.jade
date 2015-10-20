@@ -1,10 +1,82 @@
 extends ../../layouts/english
 
 block head
-	- pageTitle = 'Contact';
+	- pageTitle = 'Contacts';
 
 block recommend
 	- pageId = 'contact';
 	- recommend_lang = lang;
 
 block content
+	h4 COMPANY PROFILE
+	p
+		| Full name: OAO TMK
+		br
+		| Short name: TMK
+		br
+		| Registered address: 40 Pokrovka St., bld. 2A, Moscow 105062, Russia
+	p
+		|Tel.: +7 495 775 7600
+		br
+		| Fax: +7 495 775 7601
+		br
+		| E-mail:
+		+mail('tmk@tmk-group.com')
+	p Information subject to disclosure in accordance with laws on the securities market of the Russian Federation:
+		+link('http://www.e-disclosure.ru / portal / company. aspx?id=274')
+
+	h4 INVESTOR INFORMATION
+	h3 Marina Badudina
+	p
+		| Head of Strategic Investment Analysis and Investor Relations
+		br
+		| Tel.: +7 495 775 7600
+		br
+		| E-mail:
+		+mail('ir@tmk-group.com')
+
+	h4 WEBSITE
+	p
+		| Russian version:
+		+link('http://www.tmk-group.ru')
+		br
+		| English version:
+		+link('http://www.tmk-group.com')
+
+	h4 DEPOSITARY BANK
+	p
+		| The Bank of New York Mellon
+		br
+		| Address: 101 Barclay Street, 22 Floor, 10286 New York
+		br
+		| Contact person: Tatyana Vesselovskaya
+		br
+		| Tel.: +1 212 815 2867
+		br
+		| E-mail:
+		+mail('Tatyana.Vesselovskaya@BNYMellon.com')
+
+	h4 REGISTRAR
+	p
+		| OАО Registrator R. O. S. T
+		br
+		| Located at: 18 Stromynka Street, bld. 13, Moscow, Russian Federation
+		br
+		| Licence: 10-000-1-00264 of 12 December 2002 (indefinite)
+		br
+		| Tel.: +7 495 771 7335
+		br
+		| E-mail:
+		+mail('rost@rrost.ru')
+
+	h4 AUDITOR
+	p
+		| Ernst & Young
+		br
+		| Located at: 77 Sadovnicheskaya Embankment, bld. 1, Moscow, 115035, Russian Federation
+		br
+		| Tel.: +7 495 705 9700
+		br
+		| E-mail:
+		+mail('Moscow@ru.ey.com')
+	p Ernst & Young is a member of the Self-regulated NonProfit Partnership «Audit Chamber of Russia». Ernst & Young is included in the reference copy of the register of auditors and audit organisations under identification number 10201017420.
