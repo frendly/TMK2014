@@ -18,7 +18,7 @@ $(function () {
 
 	/*pajax*/
 	// применять ко всем ссылкам, кроме .lightbox
-	$(document).pjax('a:not(.lightbox )', '.main', {
+	$(document).pjax('a:not(.lightbox):not(.switch-language)', '.main', {
 		fragment: '.main'
 	});
 
