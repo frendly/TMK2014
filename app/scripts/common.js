@@ -99,10 +99,12 @@ function queryToInput() {
 function lightbox() {
 	var box = $('.lightbox'),
 		link,
-		blockID;
+		blockID,
+		lang = $('html').attr('lang'),
+		zoom_text = (lang === 'ru') ? 'Увеличить' : 'Zoom';
 
 	if (box.is('a')) { /*если тег задан ссылке, то считам, что внутри изображение*/
-		box.append('<div class="lightbox__zoom">Увеличить</div>');
+		box.append('<div class="lightbox__zoom">' + zoom_text + '</div>');
 		box.fancybox({
 			fitToView: false,
 			helpers: {
@@ -116,7 +118,7 @@ function lightbox() {
 		/*добавляем id к блоку, чтобы потом сослаться на него*/
 		box.each(function (i) {
 			blockID = 'lightbox_' + i;
-			link = $('<a />').prop('href', '#' + blockID).addClass('lightbox__zoom').append('Увеличить');
+			link = $('<a />').prop('href', '#' + blockID).addClass('lightbox__zoom').append(zoom_text);
 			$(this).attr('id', blockID).after(link);
 		});
 
@@ -183,9 +185,11 @@ function accordion() {
 function addLinkToCookie(cookieName) {
 	var title = document.title,
 		href = document.location.href,
+		lang = $('html').attr('lang'),
 		data = {
 			title: title,
-			href: href
+			href: href,
+			lang: lang
 		},
 		/*history*/
 		cookie = getCookie(cookieName),
@@ -258,11 +262,14 @@ function createListForHistory(cookieName) {
 
 	var cookie = getCookie(cookieName),
 		container = '.' + cookieName + '__items',
-		output = '';
+		output = '',
+		lang = $('html').attr('lang');
 
 	// формируем вывод ссылок из куки в DOM
 	$.each(cookie, function (i, item) {
-		output += '<a class="history__link" href=' + item.href + '>' + item.title + '</a>';
+		if (lang === item.lang) {
+			output += '<a class="history__link" href=' + item.href + '>' + item.title + '</a>';
+		}
 	});
 
 	$(container).empty().append(output);

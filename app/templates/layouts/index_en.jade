@@ -1,0 +1,23 @@
+-var lang = "en";
+
+include ../helpers/variables
+include ../helpers/mixins
+
+doctype html
+html(lang='#{lang}')
+	include ../blocks/head
+	body
+		include ../blocks/top-wrapper
+		.main
+			#top-navigation
+				.content
+					include ../blocks/logo
+					include ../blocks/main-menu
+			#content_main
+				include ../blocks/slider
+				include ../blocks/main/home_box
+				include ../blocks/main/message
+				include ../blocks/main/gallery-link
+		include ../blocks/footer
+
+		include ../blocks/scripts

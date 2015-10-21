@@ -1,0 +1,31 @@
+extends ../../layouts/english
+
+block head
+	- pageTitle = 'My Financial Report';
+
+block recommend
+	- pageId = 'myreport';
+	- recommend_lang = lang;
+
+block content
+	p Here you have an overview of the pages which you stored for later use. You can download the collected page as one pdf file or print the according pdf pages.
+	h3 Currently your personal financial report consists of the following pages:
+
+	form(method='post' action=globalPath + 'zip.php' target='_blank')
+		table.myreport__items(data-download-path='assets/pdf/pages/ru/')
+			tr.myreport__checkAll_container
+				td
+				td
+					label
+						span.link.link_js Select all pages
+						input(type='checkbox' id='checkAll' checked)
+
+		.cb
+			span.myreport__delete.link_js Удалить все страницы
+			.myreport__download
+				i
+				input.link(type='submit' name='action' value='Download collected pages' data-download-full='Download collected pages' data-download-select='Download selected pages')
+
+	.myreport__nopage
+		p You have not stored any page yet.
+		p To store the current page click the link "Save page".

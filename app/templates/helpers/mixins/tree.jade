@@ -7,12 +7,16 @@ mixin tools(list)
 
 
 mixin folder(item)
-		li.menu__item
+	if lang === 'ru'
+		- var title = item.title
+	else
+		- var title = item.title_en || item.title
 
-			a.menu__link(href= item.link)= item.title
+	li.menu__item
+		a.menu__link(href= item.link)= title
 
-			if item.submenu
-				+tree(item.submenu, 'submenu')
+		if item.submenu
+			+tree(item.submenu, 'submenu')
 
 
 mixin tree(tree, classname)

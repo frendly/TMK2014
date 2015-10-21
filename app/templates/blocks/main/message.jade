@@ -1,10 +1,16 @@
-.message_main
-	p.message_main__text.
-		«Нам удалось добиться существенного роста <br>
-		продаж труб большого диаметра Газпрому <br>
-		и Транснефти и сохранить лидерство <br>
-		на российский рынок бесшовных труб <br>
-		нефтегазового сортамента с долей более 60 % <br>
-		продолжив увеличивать эту долю в 2015 году»
+if lang === 'ru'
+	.message_main
+		p.message_main__text.
+			«Нам удалось добиться существенного роста <br>
+			продаж труб большого диаметра Газпрому <br>
+			и Транснефти и сохранить лидерство <br>
+			на российский рынок бесшовных труб <br>
+			нефтегазового сортамента с долей более 60 % <br>
+			продолжив увеличивать эту долю в 2015 году»
 
-	a.message_main__link(href='02.html') Обращение к акционерам
+		a.message_main__link(href='02.html') Обращение к акционерам
+else
+	.message_main
+		p.message_main__text.
+			We managed to boost large diameter pipe sales to Gazprom and Transneft, while preserving our leadership in the Russian oil and gas seamless pipe market, with the Company's market share of 60% to grow further in 2015.
+		a.message_main__link(href='02.html') Letter to Shareholders
