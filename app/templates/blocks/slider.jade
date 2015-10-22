@@ -1,3 +1,8 @@
-.slider.fotorama
-	img(src=globalPath+'assets/images/main/main_banner.jpg' alt='banner')
-	img(src=globalPath+'assets/images/main/main_banner2.jpg' alt='banner')
+if lang === 'ru'
+	.slider.fotorama
+		+img('main/main_banner.jpg')
+		+img('main/main_banner2.jpg')
+else
+	.slider.fotorama
+		+img('main/en/main_banner.jpg')
+		+img('main/en/main_banner2.jpg')

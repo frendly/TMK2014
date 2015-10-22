@@ -1,0 +1,11 @@
+extends ../../layouts/english
+
+block head
+	- pageTitle = 'Sitemap';
+
+block recommend
+	- pageId = 'sitemap';
+	- recommend_lang = lang;
+
+block content
+	include ../../blocks/sitemap

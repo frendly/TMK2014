@@ -205,174 +205,228 @@
                 "title_en": "Consolidated Statement of Cash Flows",
                 "link": "0906.html"
             }, {
-                "title": "Примечания к консолидированной финансовой отчетности",
+                "title": "Notes to the Consolidated Financial Statements",
                 "link": "090701.html",
                 "submenu": [
                     {
                         "title": "Информация о Компании",
+                        "title_en": "Corporate Information",
                         "link": "090701.html"
                     }, {
                         "title": "Основа подготовки финансовой отчетности",
+                        "title_en": "Basis of Preparation of the Financial Statements",
                         "link": "090702.html"
                     }, {
                         "title": "Существенные оценочные значения и допущения",
+                        "title_en": "Significant Estimates and Assumptions",
                         "link": "090703.html"
                     }, {
                         "title": "Изменения в учетной политике",
+                        "title_en": "Changes in Accounting Policies",
                         "link": "090704.html"
                     }, {
                         "title": "Основные положения учетной политики",
+                        "title_en": "Significant Accounting Policies",
                         "link": "09070501.html",
                         "submenu": [
                             {
                                 "title": "Принципы консолидации",
+                                "title_en": "Basis of Consolidation",
                                 "link": "09070501.html"
                             }, {
                                 "title": "Объединения бизнеса и гудвил",
+                                "title_en": "Business Combination and Goodwill",
                                 "link": "09070502.html"
                             }, {
                                 "title": "Денежные средства и их эквиваленты",
+                                "title_en": "Cash and Cash Equivalents ",
                                 "link": "09070503.html"
                             }, {
                                 "title": "Финансовые активы",
+                                "title_en": "Financial Assets",
                                 "link": "09070504.html"
                             }, {
                                 "title": "Запасы",
+                                "title_en": "Inventories",
                                 "link": "09070505.html"
                             }, {
                                 "title": "Основные средства",
+                                "title_en": "Property, Plant and Equipment",
                                 "link": "09070506.html"
                             }, {
                                 "title": "Нематериальные активы (за исключением гудвила)",
+                                "title_en": "Intangible Assets (Other than Goodwill)",
                                 "link": "09070507.html"
                             }, {
                                 "title": "Обесценение нефинансовых активов (за исключением гудвила)",
+                                "title_en": "Impairment of Non-Financial Assets (Other than Goodwill)",
                                 "link": "09070508.html"
                             }, {
                                 "title": "Кредиты и займы",
+                                "title_en": "Borrowings",
                                 "link": "09070509.html"
                             }, {
                                 "title": "Договоры аренды",
+                                "title_en": "Leases",
                                 "link": "09070510.html"
                             }, {
                                 "title": "Резервы",
+                                "title_en": "Provisions",
                                 "link": "09070511.html"
                             }, {
                                 "title": "Обязательства по выплатам вознаграждения работникам",
+                                "title_en": "Employee Benefits Liability",
                                 "link": "09070512.html"
                             }, {
                                 "title": "Государственные субсидии",
+                                "title_en": "Government Grants",
                                 "link": "09070513.html"
                             }, {
                                 "title": "Отложенный налог на прибыль",
+                                "title_en": "Deferred Income Tax",
                                 "link": "09070514.html"
                             }, {
                                 "title": "Капитал",
+                                "title_en": "Equity",
                                 "link": "09070515.html"
                             }, {
                                 "title": "Признание выручки",
+                                "title_en": "Revenue Recognition",
                                 "link": "09070516.html"
                             }
                         ]
                     }, {
                         "title": "Примечания к консолидированной финансовой отчетности",
+                        "title_en": "Notes to the Consolidated Financial Statements",
                         "link": "09070601.html",
                         "submenu": [
                             {
                                 "title": "Информация по сегментам",
+                                "title_en": "Segment Information",
                                  "link": "09070601.html"
                             }, {
                                 "title": "Себестоимость реализации",
+                                "title_en": "Cost of Sales",
                                  "link": "09070602.html"
                             }, {
                                 "title": "Коммерческие расходы",
+                                "title_en": "Selling and Distribution Expenses",
                                  "link": "09070603.html"
                             }, {
                                 "title": "Расходы на рекламу и продвижение продукции",
+                                "title_en": "Advertising and Promotion Expenses",
                                  "link": "09070604.html"
                             }, {
                                 "title": "Общехозяйственные и административные расходы",
+                                "title_en": "General and Administrative Expenses",
                                  "link": "09070605.html"
                             }, {
                                 "title": "Расходы на исследования и разработки",
+                                "title_en": "Research and Development Expenses",
                                  "link": "09070606.html"
                             }, {
                                 "title": "Прочие операционные расходы",
+                                "title_en": "Other Operating Expenses",
                                  "link": "09070607.html"
                             }, {
                                 "title": "Прочие операционные доходы",
+                                "title_en": "Other Operating Income",
                                  "link": "09070608.html"
                             }, {
                                 "title": "Налог на прибыль",
+                                "title_en": "Income Tax",
                                  "link": "09070610.html"
                             }, {
                                 "title": "Прибыль на акцию",
+                                "title_en": "Earnings per Share",
                                  "link": "09070611.html"
                             }, {
                                 "title": "Приобретение дочерних предприятий",
+                                "title_en": "Acquisition and Disposal of Subsidiaries",
                                  "link": "09070612.html"
                             }, {
                                 "title": "Инвестиции в ассоциированные предприятия",
+                                "title_en": "Investments in Associates",
                                  "link": "09070613.html"
                             }, {
                                 "title": "Денежные средства и их эквиваленты",
+                                "title_en": "Cash and Cash Equivalents",
                                  "link": "09070614.html"
                             }, {
                                 "title": "Торговая и прочая дебиторская задолженность",
+                                "title_en": "Trade and Other Receivables",
                                  "link": "09070615.html"
                             }, {
                                 "title": "Запасы",
+                                "title_en": "Inventories",
                                  "link": "09070616.html"
                             }, {
                                 "title": "Предоплаты и входящий НДС",
+                                "title_en": "Prepayments and Input VAT",
                                  "link": "09070617.html"
                             }, {
                                 "title": "Основные средства",
+                                "title_en": "Property, Plant and Equipment",
                                  "link": "09070618.html"
                             }, {
                                 "title": "Гудвил и прочие нематериальные активы",
+                                "title_en": "Goodwill and Other Intangible Assets",
                                  "link": "09070619.html"
                             }, {
                                 "title": "Прочие внеоборотные активы",
+                                "title_en": "Other Non-Current Assets",
                                  "link": "09070620.html"
                             }, {
                                 "title": "Торговая и прочая кредиторская задолженность",
+                                "title_en": "Trade and Other Payables",
                                  "link": "09070621.html"
                             }, {
                                 "title": "Резервы и начисленные обязательства",
+                                "title_en": "Provisions and Accruals",
                                  "link": "09070622.html"
                             }, {
                                 "title": "Процентные кредиты и займы",
+                                "title_en": "Interest-Bearing Loans and Borrowings",
                                  "link": "09070623.html"
                             }, {
                                 "title": "Конвертируемые облигации",
+                                "title_en": "Convertible Bonds",
                                  "link": "09070624.html"
                             }, {
                                 "title": "Обязательства по финансовой аренде",
+                                "title_en": "Finance Lease Liability",
                                  "link": "09070625.html"
                             }, {
                                 "title": "Обязательства по выплатам вознаграждения работникам",
+                                "title_en": "Employee Benefits Liability",
                                  "link": "09070626.html"
                             }, {
                                 "title": "Прочие долгосрочные обязательства",
+                                "title_en": "Other Non-Current Liabilities",
                                  "link": "09070627.html"
                             }, {
                                 "title": "Основные дочерние предприятия",
+                                "title_en": "Interests in Subsidiaries",
                                  "link": "09070628.html"
                             }, {
                                 "title": "Раскрытие информации о связанных сторонах",
+                                "title_en": "Related Parties Disclosures",
                                  "link": "09070629.html"
                             }, {
                                 "title": "Условные и договорные обязательства",
+                                "title_en": "Contingencies and Commitments",
                                  "link": "09070630.html"
                             }, {
                                 "title": "Капитал",
+                                "title_en": "Equity",
                                  "link": "09070631.html"
                             }, {
                                 "title": "Задачи и принципы управления финансовыми рисками",
+                                "title_en": "Financial Risk Management Objectives and Policies",
                                 "link": "09070632.html"
                             }, {
                                 "title": "События после отчетной даты",
+                                "title_en": "Subsequent events",
                                 "link": "09070633.html"
                             }
                         ]

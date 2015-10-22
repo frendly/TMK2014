@@ -1,0 +1,34 @@
+extends ../../layouts/english
+
+block head
+	- pageTitle = 'Earnings per Share';
+
+block recommend
+	- pageId = '09070611';
+	- recommend_lang = lang;
+
+block content
+	p Basic earnings per share are calculated by dividing the profit/(loss) for the period attributable to ordinary shareholders of the parent entity by the weighted average number of ordinary shares in issue during the period.
+	p Diluted earnings per share are calculated by dividing the profit/(loss) for the period attributable to ordinary shareholders of the parent entity adjusted for interest expense and other gains and losses for the period, net of tax, relating to convertible bonds by the weighted average number of ordinary shares outstanding during the period plus the weighted average number of shares that would be issued on the conversion of all the potential dilutive ordinary shares into ordinary shares.
+	p Earnings/(loss) per share attributable to equity holders of the parent entity were as follows:
+
+	table.table_09.table_09070611_1
+		tr.bold
+			td
+			td.bb1 2014 г.
+			td.bb1 2013 г
+		tr
+			td Profit/(loss) for the period attributable to the equity holders of the parent entity
+			td (215 559)
+			td 213 929
+		tr
+			td.bb1 Weighted average number of ordinary shares outstanding
+			td.bb1 865 576 037
+			td.bb1 865 026 466
+		tr.bold
+			td Earnings/(loss) per share attributable to the equity holders of the parent entity, basic and diluted (in US dollars)
+			td (0,25)
+			td 0,25
+
+	p In the years ended December 31, 2014 and 2013, the convertible bonds were antidilutive.
+
