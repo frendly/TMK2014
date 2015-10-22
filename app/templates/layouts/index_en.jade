@@ -13,7 +13,7 @@ html(lang='#{lang}')
 				.content
 					include ../blocks/logo
 					include ../blocks/main-menu
-			#content_main
+			#content(class='page' + pageId data-page=pageId data-page-lang=lang)
 				include ../blocks/slider
 				include ../blocks/main/home_box
 				include ../blocks/main/message

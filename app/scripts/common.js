@@ -13,11 +13,13 @@ $(function () {
 
 	addLinkToCookie('history');
 	myreport();
+	ajaxReloadPage();
 
 	$('body').addClass('show');
 });
 
 function activeMenuItem(el) {
+	// парсим url и выбираем крайнюю его часть вида 01.html
 	var	url = window.location.href,
 		segment = (url.substr(url.lastIndexOf('/') + 1)),
 		search = segment.split('?')[1] || '';
@@ -26,7 +28,14 @@ function activeMenuItem(el) {
 		search = '?' + search;
 	}
 
+	// находим идентичную ссылку в структуре меню
 	$(el)
+	// если класс существует, удаляем его
+		.find('.menu__item_active').removeClass('menu__item_active')
+		.end()
+		.find('.menu__link_active').removeClass('menu__link_active')
+		.end()
+	// находим текущую ссылку
 		.find('a[href~="' + segment + '"]')
 		.addClass('menu__link_active') // отдельно указываем класс для построения breadcrumb
 			.filter(function () {
@@ -62,6 +71,8 @@ function submenu() {
 function breadcrumb() {
 	var $links = $('.menu__item_active > .menu__link'),
 		$bc = $('.breadcrumb__items');
+		// если в селекторе уже есть ссылки, удаляем все, кроме ссылки на главную страницу
+		$bc = $bc.children().not(':first').remove().end().end();
 
 	$links.each(function () {
 		var $a = $(this).clone().removeClass().addClass('breadcrumb__link');
@@ -167,7 +178,7 @@ function prevNextLink() {
 function accordion() {
 	var acc_heading = $('.acc_heading');
 
-	acc_heading.click(function () {
+	acc_heading.on('click', function () {
 		if ($(this).hasClass('acc_open')) {
 			$(this).removeClass('acc_open').addClass('acc_closed').next().hide();
 			return false;
@@ -361,4 +372,41 @@ function myreport() {
 
 	});
 	$('.pagemyreport').on('load', createListForMyreport());
+}
+
+
+function ajaxReloadPage() {
+	/*pajax*/
+	// применять ко всем ссылкам, кроме .lightbox и .switch-language
+	$(document).pjax('a:not(.lightbox):not(.switch-language)', '.main', {
+		fragment: '.main'
+	});
+
+	$(document).on('pjax:complete', function (xhr) {
+		// если запрос успешно выполнен
+		var pageID = $('#content').attr('data-page'),
+			pageLang = $('#content').attr('data-page-lang'),
+			switchLang,
+			switchLink;
+
+		if (pageLang === 'ru') {
+			switchLang = 'en';
+			switchLink = pageID ? '/' + switchLang + '/' + pageID + '.html' : '/';
+		} else {
+			switchLang = 'ru';
+			switchLink = pageID ? '/' + pageID + '.html' : '/en/';
+		}
+		$('.switch-language').attr('href', switchLink);
+		$('html').attr('lang', pageLang);
+
+		activeMenuItem('.menu, #top-wrapper, .tools');
+		submenu();
+		breadcrumb();
+		prevNextLink();
+		lightbox();
+		accordion();
+		printPage();
+		addLinkToCookie('history');
+		myreport();
+	});
 }

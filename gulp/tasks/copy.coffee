@@ -38,6 +38,7 @@ gulp.task 'copy:components', ->
 			'fancybox/source/*'
 			'jquery-sticky/jquery.sticky.js'
 			'cookies-js/dist/cookies.min.js'
+			'jquery-pjax/jquery.pjax.js'
 
 		],
 			base: 'components'

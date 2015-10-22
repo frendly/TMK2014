@@ -8,7 +8,7 @@ html(lang='#{lang}')
 	include ../blocks/head
 
 	block recommend
-	body(class='page' + pageId)
+	body
 		include ../blocks/top-wrapper
 		.main
 			#top-navigation
@@ -24,7 +24,7 @@ html(lang='#{lang}')
 				include ../blocks/annual-report
 				include ../blocks/tools
 				include ../blocks/next-prev-navigation
-			#content
+			#content(class='page' + pageId data-page=pageId data-page-lang=lang)
 				block head
 				h1= pageTitle
 
