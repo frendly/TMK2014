@@ -360,7 +360,7 @@ function myreport() {
 	checkAll();
 
 	// проверяем страницу, если НЕ страница отчетности, то скрываем ссылку
-	if($.isNumeric(pageID) === false) {
+	if ($.isNumeric(pageID) === false) {
 		myreport__save.hide();
 	}
 
