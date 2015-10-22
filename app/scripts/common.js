@@ -354,10 +354,17 @@ function formSubmit() {
 }
 
 function myreport() {
+	var myreport__save = $('.myreport__save'),
+		pageID = $('#content').attr('data-page');
 	counterCookieItems();
 	checkAll();
 
-	$('.myreport__save').click(function () {
+	// проверяем страницу, если НЕ страница отчетности, то скрываем ссылку
+	if($.isNumeric(pageID) === false) {
+		myreport__save.hide();
+	}
+
+	myreport__save.click(function () {
 		addLinkToCookie('myreport');
 		counterCookieItems('animate');
 
