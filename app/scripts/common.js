@@ -13,43 +13,9 @@ $(function () {
 
 	addLinkToCookie('history');
 	myreport();
+	ajaxReloadPage();
 
 	$('body').addClass('show');
-
-	/*pajax*/
-	// применять ко всем ссылкам, кроме .lightbox
-	$(document).pjax('a:not(.lightbox):not(.switch-language)', '.main', {
-		fragment: '.main'
-	});
-
-	$(document).on('pjax:complete', function (xhr) {
-		// если запрос успешно выполнен
-		var pageID = $('#content').attr('data-page'),
-			pageLang = $('#content').attr('data-page-lang'),
-			switchLang,
-			switchLink;
-
-		if (pageLang === 'ru') {
-			switchLang = 'en';
-			switchLink = pageID ? '/' + switchLang + '/' + pageID + '.html' : '/';
-		} else {
-			switchLang = 'ru';
-			switchLink = pageID ? '/' + pageID + '.html' : '/en/';
-		}
-		$('.switch-language').attr('href', switchLink);
-		$('html').attr('lang', pageLang);
-
-		activeMenuItem('.menu, #top-wrapper, .tools');
-		submenu();
-		breadcrumb();
-		prevNextLink();
-		lightbox();
-		accordion();
-		printPage();
-		addLinkToCookie('history');
-		myreport();
-	});
-
 });
 
 function activeMenuItem(el) {
@@ -406,4 +372,41 @@ function myreport() {
 
 	});
 	$('.pagemyreport').on('load', createListForMyreport());
+}
+
+
+function ajaxReloadPage() {
+	/*pajax*/
+	// применять ко всем ссылкам, кроме .lightbox и .switch-language
+	$(document).pjax('a:not(.lightbox):not(.switch-language)', '.main', {
+		fragment: '.main'
+	});
+
+	$(document).on('pjax:complete', function (xhr) {
+		// если запрос успешно выполнен
+		var pageID = $('#content').attr('data-page'),
+			pageLang = $('#content').attr('data-page-lang'),
+			switchLang,
+			switchLink;
+
+		if (pageLang === 'ru') {
+			switchLang = 'en';
+			switchLink = pageID ? '/' + switchLang + '/' + pageID + '.html' : '/';
+		} else {
+			switchLang = 'ru';
+			switchLink = pageID ? '/' + pageID + '.html' : '/en/';
+		}
+		$('.switch-language').attr('href', switchLink);
+		$('html').attr('lang', pageLang);
+
+		activeMenuItem('.menu, #top-wrapper, .tools');
+		submenu();
+		breadcrumb();
+		prevNextLink();
+		lightbox();
+		accordion();
+		printPage();
+		addLinkToCookie('history');
+		myreport();
+	});
 }
