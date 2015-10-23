@@ -7,5 +7,15 @@ AddDefaultCharset utf-8
 
 # Force UTF-8 for certain file formats.
 <IfModule mod_mime.c>
-    AddCharset utf-8 .atom .css .js .json .rss .vtt .webapp .xml
+	AddCharset utf-8 .atom .css .js .json .rss .vtt .webapp .xml
 </IfModule>
+
+
+# ------------------------------------------------------------------------------
+# | Cache-Control                                                             |
+# ------------------------------------------------------------------------------
+
+# Use Cache-Control
+<FilesMatch "\.(ico|jpg|jpeg|png|gif|html|htm|xml|txt|xsl)$">
+	Header set Cache-Control "max-age=31536050"
+</FilesMatch>
