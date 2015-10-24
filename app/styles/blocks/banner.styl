@@ -5,6 +5,12 @@
 	margin-bottom 5px
 	position relative
 
+	+mobile()
+		width 100%
+		background-image none
+		background-color $orange
+		overflow hidden
+
 	&__text
 		font-size 32px
 		color #fff
@@ -12,3 +18,9 @@
 		position absolute
 		top 20px
 		right 35px
+
+		+mobile()
+			font-size 1.8em
+			right inherit
+			left 5%
+

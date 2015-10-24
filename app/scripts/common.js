@@ -16,6 +16,12 @@ $(function () {
 	ajaxReloadPage();
 
 	$('body').addClass('show');
+
+	$('.menu__button').on('click', function() {
+		$('.menu').toggle();
+
+		return false;
+	});
 });
 
 function activeMenuItem(el) {

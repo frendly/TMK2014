@@ -1,5 +1,10 @@
 .menu__wrap
 	text-align right
+
+.menu__button
+	position relative
+	z-index 101
+
 .menu
 	width 830px
 	height 70px
@@ -8,9 +13,21 @@
 	font-size 14px
 	display inline-block
 
+	+mobile()
+		display none
+		width 100%
+		height auto
+		position absolute
+		top 0
+		z-index 100
+		background-color #FFF
+
 .menu__item
 	text-align left
 	position absolute
+
+	+mobile()
+		position static
 
 .menu__item:nth-child(1)
 	top 0
