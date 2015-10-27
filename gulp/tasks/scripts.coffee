@@ -9,6 +9,12 @@ paths        = require '../paths'
 
 gulp.task 'scripts', ->
 	gulp.src [
+			'components/jquery/dist/jquery.min.js'
+			'components/fotorama/fotorama.js'
+			'components/fancybox/source/jquery.fancybox.pack.js'
+			'components/jquery-sticky/jquery.sticky.js'
+			'components/cookies-js/dist/cookies.min.js'
+			'components/jquery-pjax/jquery.pjax.js'
 			'app/scripts/common.js'
 		]
 		.pipe plumber errorHandler: errorHandler

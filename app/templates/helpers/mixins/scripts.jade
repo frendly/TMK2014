@@ -4,7 +4,7 @@ mixin renderScript(scripts)
 	each src in scripts
 		- var isExternalScript = /^(?:https?\:)?\/\//i;
 		- src = isExternalScript.test(src) ? src : globalPath + 'assets/scripts/' + src + '?' + timestamp;
-		script(src=src)
+		script(src=src defer)
 
 mixin script()
 	- var args = arguments;
