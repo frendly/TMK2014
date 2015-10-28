@@ -10,7 +10,7 @@ if ($action === "submit") {
     $page = $_REQUEST['page'];
     $lang = $_REQUEST['lang'];
 
-    $page = ($lang === "ru") ? $page : $page.'_en';
+    $page = ($lang === "ru") ? $page : 'en/' . $page;
     $link = $_SERVER['HTTP_HOST'].'/'.$page.'.html';
 
 
