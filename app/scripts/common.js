@@ -279,7 +279,6 @@ function createListForHistory(cookieName) {
 
 	// формируем вывод ссылок из куки в DOM
 	$.each(cookie, function (i, item) {
-		console.log(item.href);
 
 		if (lang === item.lang) {
 			item = $('<a />',
