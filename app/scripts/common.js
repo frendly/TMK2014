@@ -274,16 +274,24 @@ function createListForHistory(cookieName) {
 	var cookie = getCookie(cookieName),
 		container = '.' + cookieName + '__items',
 		output = '',
-		lang = $('html').attr('lang');
+		lang = $('html').attr('lang'),
+		item;
 
 	// формируем вывод ссылок из куки в DOM
 	$.each(cookie, function (i, item) {
+		console.log(item.href);
+
 		if (lang === item.lang) {
-			output += '<a class="history__link" href=' + item.href + '>' + item.title + '</a>';
+			item = $('<a />',
+			{
+				class: 'history__link',
+				href: item.href,
+				text: item.title
+			});
+			$(container).append(item);
 		}
 	});
 
-	$(container).empty().append(output);
 }
 function checkAll() {
 	$('#checkAll').change(function () {
