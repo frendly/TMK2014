@@ -21,6 +21,8 @@
 		top 0
 		z-index 100
 		background-color #FFF
+		box-shadow 0px 6px 10px #ddd
+		background-color rgba(255,255,255,0.95)
 
 .menu__item
 	text-align left
@@ -86,6 +88,9 @@ html[lang='en']
 	color $default_block_text
 	padding 10px 7px
 	display inline-block
+
+	+mobile()
+		padding 20px 20px
 
 /*SUBMENU*/
 .submenu
