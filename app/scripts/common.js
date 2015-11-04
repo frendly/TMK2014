@@ -14,14 +14,9 @@ $(function () {
 	addLinkToCookie('history');
 	myreport();
 	ajaxReloadPage();
+	mobileMenu();
 
 	$('body').addClass('show');
-
-	$('.menu__button').on('click', function() {
-		$('.menu').toggle();
-
-		return false;
-	});
 });
 
 function activeMenuItem(el) {
@@ -421,5 +416,23 @@ function ajaxReloadPage() {
 		printPage();
 		addLinkToCookie('history');
 		myreport();
+		mobileMenu();
+	});
+}
+
+function mobileMenu() {
+	$('.menu__button').on('click', function () {
+		$('.menu').toggle();
+
+		return false;
+	});
+
+	$('.menu__link').on('click', function () {
+		if ($(this).siblings('.submenu').length > 0) {
+			$(this).siblings('.submenu').toggle();
+			return false;
+		} else {
+			return true;
+		}
 	});
 }
