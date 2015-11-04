@@ -8,6 +8,10 @@
 	float left
 	min-width 100%
 
+	+mobile()
+		text-align center
+		height auto
+
 	& a
 		color #fff
 
@@ -16,6 +20,10 @@
 
 		& > *
 			display inline-block
+
+			+mobile()
+				display block
+				float none
 
 .footer__copyright
 	margin-right 30px

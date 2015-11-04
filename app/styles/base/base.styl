@@ -41,10 +41,16 @@ textarea
 	margin 30px
 	margin-right 0
 
+	+mobile()
+		float none
+
 .left
 	float left
 	margin 30px
 	margin-left 0
+
+	+mobile()
+		float none
 
 .bbd
 	/*border bottom dotted*/
@@ -61,6 +67,8 @@ textarea
 
 .oh
 	overflow hidden
+	+mobile()
+		overflow visible
 
 .clearfix
 	clearfix()
