@@ -1,5 +1,5 @@
-# CSSSR Project Template
-**Шаблон проекта для быстрого старта.**
+# TMK annual report 2014
+** [`На основе CSSSR Project Template - Шаблон проекта для быстрого старта.`](https://github.com/CSSSR/csssr-project-template)**
 
 ## Старт проекта
 
