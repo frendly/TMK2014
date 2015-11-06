@@ -1,2 +1,4 @@
 User-agent: *
-Disallow: /
+Disallow: *?q=*
+Disallow: *myreport.html
+Disallow: *recommend.html
