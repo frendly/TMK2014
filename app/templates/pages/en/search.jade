@@ -1,0 +1,11 @@
+extends ../../layouts/english
+
+block head
+	- pageTitle = 'Search';
+
+block recommend
+	- pageId = 'search';
+	- recommend_lang = lang;
+
+block content
+	gcse:search

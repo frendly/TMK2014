@@ -1,0 +1,11 @@
+extends ../layouts/default
+
+block head
+	- pageTitle = 'Поиск по сайту';
+
+block recommend
+	- pageId = 'search';
+	- recommend_lang = lang;
+
+block content
+	gcse:search
