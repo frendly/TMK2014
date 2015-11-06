@@ -10,9 +10,9 @@ block recommend
 				li: a(href='contact.html') Контакты
 				li: include ../blocks/switch-language
 				li: .search
-					form.searchform(method="post")
+					form.searchform(method="get" action="search.html")
 						#search_wrapper
-							input#search_keywords(type='text' name='search_keywords' value='' maxlength='250' placeholder='Поиск...')
+							input#search_keywords(type='text' name='q' value='' maxlength='250' placeholder='Поиск...')
 							#search_submit
 		else
 			ul
@@ -23,7 +23,7 @@ block recommend
 				li: a(href='contact.html') Contacts
 				li: include ../blocks/switch-language
 				li: .search
-					form.searchform(method="post")
+					form.searchform(method="get" action="search.html")
 						#search_wrapper
-							input#search_keywords(type='text' name='search_keywords' value='' maxlength='250' placeholder='Search')
+							input#search_keywords(type='text' name='q' value='' maxlength='250' placeholder='Search')
 							#search_submit
