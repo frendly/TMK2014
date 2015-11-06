@@ -13,6 +13,7 @@ $(function () {
 
 	addLinkToCookie('history');
 	myreport();
+	searchForm();
 	ajaxReloadPage();
 
 	$('body').addClass('show');
@@ -422,5 +423,14 @@ function ajaxReloadPage() {
 		printPage();
 		addLinkToCookie('history');
 		myreport();
+	});
+}
+
+function searchForm() {
+	var form = $('.searchform'),
+		searchSubmit = $('#search_submit');
+
+	searchSubmit.on('click', function () {
+		form.submit();
 	});
 }
