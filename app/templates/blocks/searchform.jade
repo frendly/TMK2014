@@ -1,0 +1,10 @@
+if lang === 'ru'
+	- var placeholderText = 'Поиск...';
+else
+	- var placeholderText = 'Search';
+
+.search
+	form.searchform(id="searchbox_012223152989516043781:53nryk5mja4" method="get" action="search.html")
+		#search_wrapper
+			input#search_keywords(type='text' name='q' value='' maxlength='250' placeholder=placeholderText)
+			#search_submit

@@ -13,6 +13,8 @@ $(function () {
 
 	addLinkToCookie('history');
 	myreport();
+	searchForm();
+	googleSearch();
 	ajaxReloadPage();
 
 	$('body').addClass('show');
@@ -423,4 +425,26 @@ function ajaxReloadPage() {
 		addLinkToCookie('history');
 		myreport();
 	});
+}
+
+function searchForm() {
+	var form = $('.searchform'),
+		searchSubmit = $('#search_submit');
+
+	searchSubmit.on('click', function () {
+		form.submit();
+	});
+}
+
+function googleSearch() {
+	var cx = '012223152989516043781:53nryk5mja4',
+		gcse = document.createElement('script'),
+		s = document.getElementsByTagName('script')[0];
+
+	gcse.type = 'text/javascript';
+	gcse.async = true;
+	gcse.src = (document.location.protocol === 'https:' ? 'https:' : 'http:') +
+		'//cse.google.com/cse.js?cx=' + cx;
+
+	s.parentNode.insertBefore(gcse, s);
 }

@@ -9,11 +9,7 @@ block recommend
 					li: a.recommend(href='recommend.html?index=#{pageId}&lang=#{recommend_lang}') Рекомендовать отчет
 				li: a(href='contact.html') Контакты
 				li: include ../blocks/switch-language
-				li: .search
-					form.searchform(method="post")
-						#search_wrapper
-							input#search_keywords(type='text' name='search_keywords' value='' maxlength='250' placeholder='Поиск...')
-							#search_submit
+				li: include ../blocks/searchform
 		else
 			ul
 				li: a.home(href= globalPath + 'en/') Home
@@ -22,8 +18,4 @@ block recommend
 					li: a.recommend(href='recommend.html?index=#{pageId}&lang=#{recommend_lang}') Recommend page
 				li: a(href='contact.html') Contacts
 				li: include ../blocks/switch-language
-				li: .search
-					form.searchform(method="post")
-						#search_wrapper
-							input#search_keywords(type='text' name='search_keywords' value='' maxlength='250' placeholder='Search')
-							#search_submit
+				li: include ../blocks/searchform
